@@ -6,6 +6,7 @@ import 'package:logger/logger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await AppInitializer.initAll(Logger(), env: Environment.production);
   runApp(const App());
 }
