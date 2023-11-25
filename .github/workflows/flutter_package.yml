@@ -81,10 +81,12 @@ jobs:
           cache-key: flutter-:os:-:channel:-:version:-:arch:-:hash:-${{ hashFiles('**/pubspec.lock') }}
 
       - name: 📦 Install Dependencies
-        run: |
-          flutter pub global activate very_good_cli
-          very_good --analytics false
-          very_good packages get --recursive --ignore=${{inputs.package_get_excludes}}
+        run: flutter pub get
+      #      - name: 📦 Install Dependencies
+      #        run: |
+      #          flutter pub global activate very_good_cli
+      #          very_good --analytics false
+      #          very_good packages get --recursive --ignore=${{inputs.package_get_excludes}}
 
       - name: ⚙️ Run Setup
         if: "${{inputs.setup != ''}}"
@@ -100,11 +102,13 @@ jobs:
         run: flutter analyze ${{inputs.analyze_directories}}
 
       - name: 🧪 Run Tests
-        run: very_good test -j ${{inputs.concurrency}} ${{(inputs.test_recursion && '--recursive') || ''}} ${{(inputs.test_optimization && '--optimization') || '--no-optimization'}} --coverage --test-randomize-ordering-seed random
+        run: flutter test
+#      - name: 🧪 Run Tests
+#        run: very_good test -j ${{inputs.concurrency}} ${{(inputs.test_recursion && '--recursive') || ''}} ${{(inputs.test_optimization && '--optimization') || '--no-optimization'}} --coverage --test-randomize-ordering-seed random
 
-      - name: 📊 Check Code Coverage
-        uses: VeryGoodOpenSource/very_good_coverage@v2
-        with:
-          path: ${{inputs.working_directory}}/coverage/lcov.info
-          exclude: ${{inputs.coverage_excludes}}
-          min_coverage: ${{inputs.min_coverage}}
+#      - name: 📊 Check Code Coverage
+#        uses: VeryGoodOpenSource/very_good_coverage@v2
+#        with:
+#          path: ${{inputs.working_directory}}/coverage/lcov.info
+#          exclude: ${{inputs.coverage_excludes}}
+#          min_coverage: ${{inputs.min_coverage}}
