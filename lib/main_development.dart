@@ -8,9 +8,9 @@ import 'package:logger/logger.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await AppInitializer.initAll(Logger(), env:Environment.development);
+  await AppInitializer.initAll(Logger(), env: Environment.development);
   await bootstrap(
-        () => DevicePreview(
+    () => DevicePreview(
       builder: (context) => const App(), // Wrap your app
     ),
   );

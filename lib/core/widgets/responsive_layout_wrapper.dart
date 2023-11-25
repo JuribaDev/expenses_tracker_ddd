@@ -22,7 +22,6 @@ class ResponsiveLayoutWrapper extends StatelessWidget {
   static const int tabletLandscapeBreakpoint = 1440;
   static const int desktopBreakpoint = 1920;
 
-
   static bool isMobilePortrait(BuildContext context) => MediaQuery.of(context).size.width < mobilePortraitBreakpoint;
 
   static bool isMobileLandscape(BuildContext context) =>

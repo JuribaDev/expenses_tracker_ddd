@@ -1,12 +1,9 @@
-
 // ignore_for_file: inference_failure_on_collection_literal
 
 import 'package:expenses_tracker_ddd/core/utils/parsers.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-
 void main() {
-
   group('parseGenericList tests', () {
     test('should throw FormatException if data is not a List', () {
       // Arrange

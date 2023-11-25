@@ -5,8 +5,6 @@ import 'package:logger/logger.dart';
 final sl = GetIt.instance;
 
 Future<void> initializeDependencies(Logger logger, {required Environment env}) async {
-
   // Logger
   sl.registerSingleton<Logger>(logger);
-
 }

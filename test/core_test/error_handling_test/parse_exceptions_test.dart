@@ -14,7 +14,6 @@ void main() {
   });
 
   group('parseExceptions', () {
-
     test('should return NonUserViewableException when FormatException is encountered', () {
       // Arrange
       const exception = FormatException();
@@ -27,7 +26,7 @@ void main() {
 
     test('should return NonUserViewableException when unexpected Exception is encountered', () {
       // Arrange
-      final  unexpectedException = Exception()  ;
+      final unexpectedException = Exception();
       // Act
       final result = parseExceptions(unexpectedException, mockLogger);
       // Assert
