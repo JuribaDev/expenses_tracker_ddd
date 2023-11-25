@@ -6,8 +6,7 @@ part of 'local_source_manager.dart';
 abstract class _$LocalDatabaseManager extends GeneratedDatabase {
   _$LocalDatabaseManager(QueryExecutor e) : super(e);
   @override
-  Iterable<TableInfo<Table, Object?>> get allTables =>
-      allSchemaEntities.whereType<TableInfo<Table, Object?>>();
+  Iterable<TableInfo<Table, Object?>> get allTables => allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [];
 }
