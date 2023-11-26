@@ -3,15 +3,16 @@ import 'dart:io';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/parse_exceptions.dart';
+import 'package:expenses_tracker_ddd/infrastructure/expense/data_sources/local_data_source/table/expense_table.dart';
 import 'package:logger/logger.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
-part 'local_source_manager.g.dart';
+part 'drift_local_source_manager.g.dart';
 
-@DriftDatabase()
-class LocalDatabaseManager extends _$LocalDatabaseManager {
-  LocalDatabaseManager(super.e);
+@DriftDatabase(tables: [ExpensesTable])
+class DriftLocalDatabaseManager extends _$DriftLocalDatabaseManager {
+  DriftLocalDatabaseManager(super.e);
 
   @override
   int get schemaVersion => 1;

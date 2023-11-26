@@ -8,14 +8,14 @@ class TestEntity extends Entity {
 void main() {
   group('Entity', () {
     test('Should contain the correct properties', () {
-      const id = 'test_id';
+      const id = 100;
       const entity = TestEntity(id);
 
       expect(entity.id, id);
     });
 
     test('Props should contain all fields', () {
-      const id = 'test_id';
+      const id = 15;
       const entity = TestEntity(id);
 
       expect(entity.props, containsAll([id]));

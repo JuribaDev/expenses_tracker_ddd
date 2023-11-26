@@ -13,5 +13,10 @@ Exception parseExceptions(Object error, Logger logger) {
     logger.e('ValidationException detected. Returning ValidationException. : ${error.message}');
     return UserViewableException(message: error.message);
   }
+  if (error is UserViewableException) {
+    logger.e('UserViewableException detected. Returning UserViewableException. : ${error.message}');
+    return UserViewableException(message: error.message);
+  }
+  logger.e('Unknown Exception detected. Returning NonUserViewableException. : $error');
   return NonUserViewableException();
 }

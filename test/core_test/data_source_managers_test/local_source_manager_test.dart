@@ -1,4 +1,4 @@
-import 'package:expenses_tracker_ddd/core/data_source_managers/local_source_manager.dart';
+import 'package:expenses_tracker_ddd/core/data_source_managers/drift_local_source_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -14,7 +14,7 @@ void main() {
 
     test('In-Memory Database should be created successfully', () async {
       // Arrange & Act
-      final db = LocalDatabaseManager(openInMemoryConnection(mockLogger));
+      final db = DriftLocalDatabaseManager(openInMemoryConnection(mockLogger));
       // Assert
       verify(() => mockLogger.i('In memory db created successfully')).called(1);
       expect(db, isNotNull);
@@ -22,7 +22,7 @@ void main() {
     });
     test('Production Database should be created successfully', () async {
       // Arrange & Act
-      final db = LocalDatabaseManager(openRealConnection(mockLogger));
+      final db = DriftLocalDatabaseManager(openRealConnection(mockLogger));
       // Assert
       expect(db, isNotNull);
       verify(() => mockLogger.i('Production db created successfully')).called(1);
