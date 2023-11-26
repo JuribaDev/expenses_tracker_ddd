@@ -1,13 +1,16 @@
+import 'package:expenses_tracker_ddd/core/constants/type_devs.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/core/validation_exception.dart';
 import 'package:expenses_tracker_ddd/domain/core/value_object.dart';
 
 class Amount extends ValueObject<double> {
+  const Amount(super.value);
+
   const Amount._(super.value);
 
   static const maxAmount = 99999999.99;
 
-  static Either<ValidationException, Amount> create(String value) {
+  static EitherValidationExceptionOrNull<Amount> create(String value) {
     if (value.isEmpty) {
       return Left(ValidationException('Amount can not be empty.'));
     }
