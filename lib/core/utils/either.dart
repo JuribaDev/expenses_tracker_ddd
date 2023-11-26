@@ -5,11 +5,13 @@ abstract class Either<L, R> {
 
   // If this instance contains a left value, isLeft will be true.
   bool get isLeft;
+
   // If this instance contains a right value, isRight will be true.
   bool get isRight;
 
   // Get the left value. Throws if this is a Right.
   L get left;
+
   // Get the right value. Throws if this is a Left.
   R get right;
 
@@ -29,17 +31,20 @@ abstract class Either<L, R> {
 // Left is a type of Either that represents a left value and its associated operations.
 class Left<L, R> extends Either<L, R> {
   const Left(this.value);
+
   final L value;
 
   @override
   bool get isLeft => true;
+
   @override
   bool get isRight => false;
 
   @override
   L get left => value;
+
   @override
-  R get right => throw Exception('Cannot get right value of a Left');
+  R get right => throw Exception('can not get right value of a Left');
 
   @override
   T fold<T>(T Function(L) leftF, T Function(R) rightF) => leftF(value);
@@ -57,15 +62,18 @@ class Left<L, R> extends Either<L, R> {
 // Right is a type of Either that represents a right value and its associated operations.
 class Right<L, R> extends Either<L, R> {
   const Right(this.value);
+
   final R value;
 
   @override
   bool get isLeft => false;
+
   @override
   bool get isRight => true;
 
   @override
-  L get left => throw Exception('Cannot get left value of a Right');
+  L get left => throw Exception('can not get left value of a Right');
+
   @override
   R get right => value;
 

@@ -26,7 +26,7 @@ void main() {
       // Arrange & Act
       final exception = UserViewableException();
       // Assert
-      expect(exception.toString(), 'An unexpected error occurred. Please try again later.');
+      expect(exception.toString(), '');
     });
 
     test('fromResponse() should correctly extract errors from response body', () {

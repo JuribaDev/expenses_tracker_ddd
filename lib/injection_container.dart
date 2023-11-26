@@ -11,9 +11,5 @@ Future<void> initializeDependencies(Logger logger, {required Environment env}) a
   // Logger
   sl.registerSingleton<Logger>(logger);
   // Local Database
-  sl.registerSingleton<LocalDatabaseManager>(
-    LocalDatabaseManager(
-      Environment.development != env ? openRealConnection(sl()) : openInMemoryConnection(sl()),
-    ),
-  );
+  sl.registerSingleton<LocalDatabaseManager>(LocalDatabaseManager(openRealConnection(sl())));
 }
