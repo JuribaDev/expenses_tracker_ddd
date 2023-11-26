@@ -12,7 +12,7 @@ class UserViewableException implements Exception {
         return entry.value.join(', ');
       }).join('\n');
     }
-    return message ?? 'An unexpected error occurred. Please try again later.';
+    return message ?? '';
   }
 
   // ignore: prefer_constructors_over_static_methods
