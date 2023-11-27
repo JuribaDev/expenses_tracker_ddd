@@ -31,7 +31,7 @@ class DriftLocalDataSource {
     }
   }
 
-  Future<List<Title>> getRecentExpensesTitle() async {
+  Future<List<Title>> getLastTenExpensesTitle() async {
     try {
       const sql = 'SELECT title FROM expenses ORDER BY date DESC LIMIT 10';
       final result = await localDatabaseManager.customSelect(sql).get();
