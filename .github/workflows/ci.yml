@@ -19,16 +19,16 @@ jobs:
   #      min_score: 95
 
 
-  build:
-    needs:
-      verify-flutter
-    #        [
-    #        verify-flutter,
-    #        verify-pana-flutter,
-    #    ]
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: noop
-        run: echo 'noop'
+#  build:
+#    needs:
+#      verify-flutter
+#    #        [
+#    #        verify-flutter,
+#    #        verify-pana-flutter,
+#    #    ]
+#
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: noop
+#        run: echo 'noop'
