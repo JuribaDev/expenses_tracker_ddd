@@ -33,7 +33,7 @@ class DriftLocalDataSource {
 
   Future<List<Title>> getRecentExpensesTitle() async {
     try {
-      const sql = 'SELECT title FROM expenses_table ORDER BY date DESC LIMIT 10';
+      const sql = 'SELECT title FROM expenses ORDER BY date DESC LIMIT 10';
       final result = await localDatabaseManager.customSelect(sql).get();
 
       logger.i('Recent expenses retrieved successfully');
@@ -79,7 +79,7 @@ class DriftLocalDataSource {
 
   Stream<List<ExpenseEntity>> watchLastMonthExpenses() {
     final oneMonthAgo = DateTime.now().subtract(const Duration(days: 30));
-
+    logger.i('watching last month expenses');
     return localDatabaseManager
         .select(localDatabaseManager.expensesTable)
         .watch()
@@ -103,7 +103,7 @@ class DriftLocalDataSource {
 
   Future<List<ExpenseEntity>> getExpenses() async {
     try {
-      const sql = 'SELECT * FROM expenses_table ORDER BY date DESC';
+      const sql = 'SELECT * FROM expenses ORDER BY date DESC';
       final result = await localDatabaseManager.customSelect(sql).get();
       logger.i('Expenses retrieved successfully');
       return result.map((row) {

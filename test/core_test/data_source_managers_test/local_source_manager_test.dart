@@ -1,3 +1,5 @@
+import 'package:expenses_tracker_ddd/core/data_source_managers/connection/connection.dart' as impl;
+import 'package:expenses_tracker_ddd/core/data_source_managers/connection/in_memory_connection.dart';
 import 'package:expenses_tracker_ddd/core/data_source_managers/drift_local_source_manager.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -20,12 +22,12 @@ void main() {
       expect(db, isNotNull);
       await db.close();
     });
-    test('Production Database should be created successfully', () async {
+    test('On other platforms Database should be created successfully', () async {
       // Arrange & Act
-      final db = DriftLocalDatabaseManager(openRealConnection(mockLogger));
+      final db = DriftLocalDatabaseManager(impl.connect(mockLogger));
       // Assert
       expect(db, isNotNull);
-      verify(() => mockLogger.i('Production db created successfully')).called(1);
+      verify(() => mockLogger.i('Other platforms production db created successfully')).called(1);
       await db.close();
     });
   });

@@ -16,11 +16,11 @@ void main() {
   setUp(() {
     mockDataSource = MockDriftLocalDataSource();
     repository = ExpenseLocalRepositoryImpl(mockDataSource);
-    registerFallbackValue(expenseEntityMock);
+    registerFallbackValue(expenseEntityMockRes);
   });
 
   group('addExpense', () {
-    final mockExpense = expenseEntityMock;
+    final mockExpense = expenseEntityMockRes;
 
     test('should return success message when adding an expense succeeds', () async {
       // Arrange
@@ -96,7 +96,7 @@ void main() {
   group('watchLastMonthExpenses', () {
     test('should return a stream of expenses when watching last month expenses succeeds', () async {
       // Arrange
-      final mockStream = Stream.value([expenseEntityMock]);
+      final mockStream = Stream.value([expenseEntityMockRes]);
       when(() => mockDataSource.watchLastMonthExpenses()).thenAnswer((_) => mockStream);
 
       // Act
@@ -166,7 +166,7 @@ void main() {
   group('getExpenses', () {
     test('should return a list of expenses when retrieving expenses succeeds', () async {
       // Arrange
-      final mockExpenses = [expenseEntityMock];
+      final mockExpenses = [expenseEntityMockRes];
       when(() => mockDataSource.getExpenses()).thenAnswer((_) async => mockExpenses);
 
       // Act
@@ -205,7 +205,7 @@ void main() {
       when(() => mockDataSource.updateExpense(any())).thenAnswer((_) async => successMessage);
 
       // Act
-      final result = await repository.updateExpense(expenseEntityMock);
+      final result = await repository.updateExpense(expenseEntityMockRes);
 
       // Assert
       expect(result, isA<Right>());
@@ -213,7 +213,7 @@ void main() {
         (l) => fail('Expected success but got failure'),
         (r) => expect(r, equals(successMessage)),
       );
-      verify(() => mockDataSource.updateExpense(expenseEntityMock)).called(1);
+      verify(() => mockDataSource.updateExpense(expenseEntityMockRes)).called(1);
     });
 
     test('should return failure when updating an expense fails', () async {
@@ -222,7 +222,7 @@ void main() {
       when(() => mockDataSource.updateExpense(any())).thenThrow(exception);
 
       // Act
-      final result = await repository.updateExpense(expenseEntityMock);
+      final result = await repository.updateExpense(expenseEntityMockRes);
 
       // Assert
       expect(result, isA<Left>());
@@ -230,7 +230,7 @@ void main() {
         (l) => expect(l.message, equals('Error')),
         (r) => fail('Expected failure but got success'),
       );
-      verify(() => mockDataSource.updateExpense(expenseEntityMock)).called(1);
+      verify(() => mockDataSource.updateExpense(expenseEntityMockRes)).called(1);
     });
   });
 }
