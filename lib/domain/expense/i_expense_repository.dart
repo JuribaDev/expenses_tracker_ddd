@@ -8,7 +8,7 @@ abstract class IExpenseRepository {
 
   EitherFailureOrSuccess<Stream<List<ExpenseEntity>>> watchLastMonthExpenses();
 
-  EitherFailureOrSuccess<List<Title>> getRecentExpensesTitle();
+  EitherFailureOrSuccess<List<Title>> getLastTenExpensesTitle();
 
   EitherFailureOrSuccess<String> updateExpense(ExpenseEntity expense);
 

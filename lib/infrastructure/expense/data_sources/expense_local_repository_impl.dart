@@ -23,9 +23,9 @@ class ExpenseLocalRepositoryImpl implements IExpenseRepository {
   }
 
   @override
-  EitherFailureOrSuccess<List<Title>> getRecentExpensesTitle() async {
+  EitherFailureOrSuccess<List<Title>> getLastTenExpensesTitle() async {
     try {
-      final result = await localDataSource.getRecentExpensesTitle();
+      final result = await localDataSource.getLastTenExpensesTitle();
       return Right(result);
     } on UserViewableException catch (e) {
       return Left(Failure(message: e.message!));

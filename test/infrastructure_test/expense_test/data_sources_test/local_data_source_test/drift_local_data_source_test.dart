@@ -55,7 +55,7 @@ void main() {
     test('Should get recent expenses title from the database and log success message', () async {
       // Arrange & Act
       await dataSource.addExpense(expenseEntityMockReq);
-      final res = await dataSource.getRecentExpensesTitle();
+      final res = await dataSource.getLastTenExpensesTitle();
 
       // Assert
       expect(res, isA<List<Title>>());
@@ -115,7 +115,7 @@ void main() {
       // Arrange
       await dataSource.addExpense(expenseEntityMockReq);
       // Act
-      final res = await dataSource.getRecentExpensesTitle();
+      final res = await dataSource.getLastTenExpensesTitle();
 
       // Assert
       expect(res, isA<List<Title>>());
