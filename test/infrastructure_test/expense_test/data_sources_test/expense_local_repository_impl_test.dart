@@ -57,14 +57,14 @@ void main() {
     });
   });
 
-  group('getRecentExpensesTitle', () {
-    test('should return a list of titles when retrieving recent expenses succeeds', () async {
+  group('getLastTenExpensesTitle', () {
+    test('should return a list of titles when retrieving last ten expenses succeeds', () async {
       // Arrange
       const mockTitles = [Title('title1'), Title('title2')];
-      when(() => mockDataSource.getRecentExpensesTitle()).thenAnswer((_) async => mockTitles);
+      when(() => mockDataSource.getLastTenExpensesTitle()).thenAnswer((_) async => mockTitles);
 
       // Act
-      final result = await repository.getRecentExpensesTitle();
+      final result = await repository.getLastTenExpensesTitle();
 
       // Assert
       expect(result, isA<Right>());
@@ -72,16 +72,16 @@ void main() {
         (l) => fail('Expected success but got failure'),
         (r) => expect(r, equals(mockTitles)),
       );
-      verify(() => mockDataSource.getRecentExpensesTitle()).called(1);
+      verify(() => mockDataSource.getLastTenExpensesTitle()).called(1);
     });
 
     test('should return failure when retrieving recent expenses fails', () async {
       // Arrange
       final exception = UserViewableException(message: 'Error');
-      when(() => mockDataSource.getRecentExpensesTitle()).thenThrow(exception);
+      when(() => mockDataSource.getLastTenExpensesTitle()).thenThrow(exception);
 
       // Act
-      final result = await repository.getRecentExpensesTitle();
+      final result = await repository.getLastTenExpensesTitle();
 
       // Assert
       expect(result, isA<Left>());
@@ -89,7 +89,7 @@ void main() {
         (l) => expect(l.message, equals('Error')),
         (r) => fail('Expected failure but got success'),
       );
-      verify(() => mockDataSource.getRecentExpensesTitle()).called(1);
+      verify(() => mockDataSource.getLastTenExpensesTitle()).called(1);
     });
   });
 
