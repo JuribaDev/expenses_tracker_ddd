@@ -14,12 +14,12 @@ import '../../helpers/helpers.dart';
 class MockExpenseRepository extends Mock implements IExpenseRepository {}
 
 void main() {
-  late ViewExpensesUseCase useCase;
+  late GetExpensesUseCase useCase;
   late MockExpenseRepository mockRepository;
 
   setUp(() {
     mockRepository = MockExpenseRepository();
-    useCase = ViewExpensesUseCase(mockRepository);
+    useCase = GetExpensesUseCase(mockRepository);
   });
 
   group('ViewExpensesUseCase', () {
@@ -32,7 +32,7 @@ void main() {
 
       // Act
       final result = await useCase(null);
-      final dtoList = ExpenseDTO.fromListEntity(expensesEntityList);
+      final dtoList = ExpenseDto.fromListEntity(expensesEntityList);
       // Assert
       expect(result, isA<Right>());
       result.fold(

@@ -16,7 +16,7 @@ void main() {
     );
 
     test('fromEntity should correctly convert ExpenseEntity to ExpenseDTO', () {
-      final dto = ExpenseDTO.fromEntity(expenseEntity);
+      final dto = ExpenseDto.fromEntity(expenseEntity);
 
       expect(dto.id, expenseEntity.id);
       expect(dto.title, expenseEntity.title.value);
@@ -26,7 +26,7 @@ void main() {
 
     test('fromListEntity should correctly convert a list of ExpenseEntities to a list of ExpenseDTOs', () {
       final entities = [expenseEntity];
-      final dtos = ExpenseDTO.fromListEntity(entities);
+      final dtos = ExpenseDto.fromListEntity(entities);
 
       expect(dtos.length, entities.length);
       expect(dtos.first.id, entities.first.id);
@@ -40,9 +40,9 @@ void main() {
       final entityStream = Stream.fromIterable([
         [expenseEntity],
       ]);
-      final dtoStream = ExpenseDTO.fromStreamOfEntity(entityStream);
+      final dtoStream = ExpenseDto.fromStreamOfEntity(entityStream);
 
-      expect(await dtoStream.first, isA<List<ExpenseDTO>>());
+      expect(await dtoStream.first, isA<List<ExpenseDto>>());
       final dtos = await dtoStream.first;
       expect(dtos.first.id, expenseEntity.id);
       expect(dtos.first.title, expenseEntity.title.value);

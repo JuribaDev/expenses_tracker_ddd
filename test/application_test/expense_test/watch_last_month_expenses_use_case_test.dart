@@ -35,7 +35,7 @@ void main() {
       streamController.add([expenseEntityMockRes]);
       final expensesStream = streamController.stream;
       when(() => mockRepository.watchLastMonthExpenses()).thenAnswer((_) async => Right(expensesStream));
-      final expectedDTOList = [ExpenseDTO.fromEntity(expenseEntityMockRes)];
+      final expectedDTOList = [ExpenseDto.fromEntity(expenseEntityMockRes)];
 
       // Act
       final result = await useCase(null);
