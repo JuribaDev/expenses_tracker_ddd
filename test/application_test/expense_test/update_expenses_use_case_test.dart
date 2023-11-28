@@ -1,7 +1,7 @@
 // ignore_for_file: strict_raw_type
 
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/update_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/update_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';
 import 'package:flutter_test/flutter_test.dart';

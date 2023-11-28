@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/view_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/get_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/get_expenses_bloc/get_expenses_bloc.dart';
