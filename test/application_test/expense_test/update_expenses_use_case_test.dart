@@ -26,7 +26,7 @@ void main() {
 
     test('Should return success message when updating an expense is successful', () async {
       // Arrange
-      final validExpenseDTO = ExpenseDTO(
+      final validExpenseDTO = ExpenseDto(
         id: 1,
         title: 'Test',
         amount: '100',
@@ -48,7 +48,7 @@ void main() {
 
     test('Should return failure when updating an expense fails due to null id', () async {
       // Arrange
-      final invalidExpenseDTO = ExpenseDTO(
+      final invalidExpenseDTO = ExpenseDto(
         title: 'Test',
         amount: '100',
         date: DateTime.now(),
@@ -68,7 +68,7 @@ void main() {
 
     test('Should return failure when updating an expense fails due to invalid data', () async {
       // Arrange
-      final invalidExpenseDTO = ExpenseDTO(
+      final invalidExpenseDTO = ExpenseDto(
         id: 1,
         title: '',
         amount: '100',

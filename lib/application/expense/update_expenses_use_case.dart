@@ -6,13 +6,13 @@ import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/entity/expense_entity.dart';
 import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';
 
-class UpdateExpenseUseCase extends UseCase<String, ExpenseDTO> {
+class UpdateExpenseUseCase extends UseCase<String, ExpenseDto> {
   UpdateExpenseUseCase(this._repo);
 
   final IExpenseRepository _repo;
 
   @override
-  EitherFailureOrSuccess<String> call(ExpenseDTO params) async {
+  EitherFailureOrSuccess<String> call(ExpenseDto params) async {
     if (params.id == null) {
       return Left(Failure(message: 'Expense id is required'));
     }

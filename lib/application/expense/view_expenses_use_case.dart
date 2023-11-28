@@ -5,18 +5,18 @@ import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';
 
-class ViewExpensesUseCase extends UseCase<List<ExpenseDTO>, void> {
-  ViewExpensesUseCase(this._repo);
+class GetExpensesUseCase extends UseCase<List<ExpenseDto>, void> {
+  GetExpensesUseCase(this._repo);
 
   final IExpenseRepository _repo;
 
   @override
-  EitherFailureOrSuccess<List<ExpenseDTO>> call(void params) async {
+  EitherFailureOrSuccess<List<ExpenseDto>> call(void params) async {
     final expenses = await _repo.getExpenses();
     if (expenses.isLeft) {
       return Left(Failure(message: expenses.left.message));
     }
-    final expensesModel = ExpenseDTO.fromListEntity(expenses.right);
+    final expensesModel = ExpenseDto.fromListEntity(expenses.right);
     return Right(expensesModel);
   }
 }

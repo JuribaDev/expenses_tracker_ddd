@@ -9,7 +9,7 @@ ExpenseEntity expenseEntityMockRes = ExpenseEntity.create(
   DateTime.now(),
 ).right;
 
-ExpenseDTO expenseDTOMockReq = ExpenseDTO(
+ExpenseDto expenseDTOMockReq = ExpenseDto(
   id: 1,
   title: 'Groceries',
   amount: '100',

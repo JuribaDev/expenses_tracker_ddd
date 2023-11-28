@@ -4,15 +4,15 @@ import 'package:expenses_tracker_ddd/core/constants/type_devs.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';
 
-class WatchLastMonthExpensesUseCase extends UseCase<Stream<List<ExpenseDTO>>, void> {
+class WatchLastMonthExpensesUseCase extends UseCase<Stream<List<ExpenseDto>>, void> {
   WatchLastMonthExpensesUseCase(this._repo);
 
   final IExpenseRepository _repo;
 
   @override
-  EitherFailureOrSuccess<Stream<List<ExpenseDTO>>> call(void params) async {
+  EitherFailureOrSuccess<Stream<List<ExpenseDto>>> call(void params) async {
     final result = await _repo.watchLastMonthExpenses();
 
-    return Right(ExpenseDTO.fromStreamOfEntity(result.right));
+    return Right(ExpenseDto.fromStreamOfEntity(result.right));
   }
 }

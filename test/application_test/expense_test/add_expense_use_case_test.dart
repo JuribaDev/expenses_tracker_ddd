@@ -27,7 +27,7 @@ void main() {
 
     test('Should return success message when adding an expense is successful', () async {
       // Arrange
-      final validExpense = ExpenseDTO(
+      final validExpense = ExpenseDto(
         id: 1,
         title: 'Test',
         amount: '100',
@@ -49,7 +49,7 @@ void main() {
 
     test('Should return failure when adding an expense fails due to invalid data', () async {
       // Arrange
-      final invalidExpense = ExpenseDTO(
+      final invalidExpense = ExpenseDto(
         title: 'Test',
         amount: '',
         date: DateTime.now(),

@@ -1,3 +1,4 @@
+import 'package:expenses_tracker_ddd/config/theme/color_scheme.dart';
 import 'package:expenses_tracker_ddd/counter/view/counter_page.dart';
 import 'package:expenses_tracker_ddd/l10n/l10n.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +8,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: CounterPage(),
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(colorScheme: lightColorScheme),
+      darkTheme: ThemeData(colorScheme: darkColorScheme),
+      home: const CounterPage(),
     );
   }
 }

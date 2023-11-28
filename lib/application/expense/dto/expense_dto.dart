@@ -3,8 +3,8 @@
 import 'package:equatable/equatable.dart';
 import 'package:expenses_tracker_ddd/domain/expense/entity/expense_entity.dart';
 
-class ExpenseDTO extends Equatable {
-  const ExpenseDTO({
+class ExpenseDto extends Equatable {
+  const ExpenseDto({
     required this.title,
     required this.amount,
     required this.date,
@@ -19,12 +19,12 @@ class ExpenseDTO extends Equatable {
   @override
   List<Object?> get props => [id, title, amount, date];
 
-  static List<ExpenseDTO> fromListEntity(List<ExpenseEntity> e) {
+  static List<ExpenseDto> fromListEntity(List<ExpenseEntity> e) {
     return e.map(fromEntity).toList();
   }
 
-  static ExpenseDTO fromEntity(ExpenseEntity e) {
-    return ExpenseDTO(
+  static ExpenseDto fromEntity(ExpenseEntity e) {
+    return ExpenseDto(
       id: e.id,
       title: e.title.value,
       amount: e.amount.value.toString(),
@@ -32,7 +32,7 @@ class ExpenseDTO extends Equatable {
     );
   }
 
-  static Stream<List<ExpenseDTO>> fromStreamOfEntity(Stream<List<ExpenseEntity>> e) {
+  static Stream<List<ExpenseDto>> fromStreamOfEntity(Stream<List<ExpenseEntity>> e) {
     return e.map(fromListEntity);
   }
 }
