@@ -1,5 +1,5 @@
 import 'package:bloc_test/bloc_test.dart';
-import 'package:expenses_tracker_ddd/application/expense/delete_expense_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/delete_expense_use_case.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/delete_expense_bloc/delete_expense_bloc.dart';

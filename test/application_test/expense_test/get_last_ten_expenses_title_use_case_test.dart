@@ -1,6 +1,6 @@
 // ignore_for_file: strict_raw_type
 
-import 'package:expenses_tracker_ddd/application/expense/get_last_ten_expenses_title_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/get_last_ten_expenses_title_use_case.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/expense.dart';

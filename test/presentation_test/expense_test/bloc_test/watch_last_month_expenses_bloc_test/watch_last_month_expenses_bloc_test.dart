@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/watch_last_month_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/watch_last_month_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/watch_last_month_expenses_bloc/watch_last_month_expenses_bloc.dart';
@@ -20,7 +20,6 @@ void main() {
     setUp(() {
       watchLastMonthExpensesUseCase = MockWatchLastMonthExpensesUseCase();
       watchLastMonthExpensesBloc = WatchLastMonthExpensesBloc(watchLastMonthExpensesUseCase);
-      // registerFallbackValue(Stream.value(<ExpenseDto>[expenseDTOMockReq]));
     });
 
     blocTest<WatchLastMonthExpensesBloc, WatchLastMonthExpensesState>(

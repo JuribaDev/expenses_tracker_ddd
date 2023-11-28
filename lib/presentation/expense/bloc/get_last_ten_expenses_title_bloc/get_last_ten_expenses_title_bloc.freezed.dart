@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'get_expenses_bloc.dart';
+part of 'get_last_ten_expenses_title_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,50 +15,52 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$GetExpensesEvent {
+mixin _$GetLastTenExpensesTitleEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getExpenses,
+    required TResult Function() getLastTenExpensesTitleEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getExpenses,
+    TResult? Function()? getLastTenExpensesTitleEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getExpenses,
+    TResult Function()? getLastTenExpensesTitleEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetExpenses value) getExpenses,
+    required TResult Function(_GetLastTenExpensesTitleEvent value) getLastTenExpensesTitleEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetExpenses value)? getExpenses,
+    TResult? Function(_GetLastTenExpensesTitleEvent value)? getLastTenExpensesTitleEvent,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetExpenses value)? getExpenses,
+    TResult Function(_GetLastTenExpensesTitleEvent value)? getLastTenExpensesTitleEvent,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetExpensesEventCopyWith<$Res> {
-  factory $GetExpensesEventCopyWith(GetExpensesEvent value, $Res Function(GetExpensesEvent) then) =
-      _$GetExpensesEventCopyWithImpl<$Res, GetExpensesEvent>;
+abstract class $GetLastTenExpensesTitleEventCopyWith<$Res> {
+  factory $GetLastTenExpensesTitleEventCopyWith(
+          GetLastTenExpensesTitleEvent value, $Res Function(GetLastTenExpensesTitleEvent) then) =
+      _$GetLastTenExpensesTitleEventCopyWithImpl<$Res, GetLastTenExpensesTitleEvent>;
 }
 
 /// @nodoc
-class _$GetExpensesEventCopyWithImpl<$Res, $Val extends GetExpensesEvent> implements $GetExpensesEventCopyWith<$Res> {
-  _$GetExpensesEventCopyWithImpl(this._value, this._then);
+class _$GetLastTenExpensesTitleEventCopyWithImpl<$Res, $Val extends GetLastTenExpensesTitleEvent>
+    implements $GetLastTenExpensesTitleEventCopyWith<$Res> {
+  _$GetLastTenExpensesTitleEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -67,31 +69,34 @@ class _$GetExpensesEventCopyWithImpl<$Res, $Val extends GetExpensesEvent> implem
 }
 
 /// @nodoc
-abstract class _$$GetExpensesImplCopyWith<$Res> {
-  factory _$$GetExpensesImplCopyWith(_$GetExpensesImpl value, $Res Function(_$GetExpensesImpl) then) =
-      __$$GetExpensesImplCopyWithImpl<$Res>;
+abstract class _$$GetLastTenExpensesTitleEventImplCopyWith<$Res> {
+  factory _$$GetLastTenExpensesTitleEventImplCopyWith(
+          _$GetLastTenExpensesTitleEventImpl value, $Res Function(_$GetLastTenExpensesTitleEventImpl) then) =
+      __$$GetLastTenExpensesTitleEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetExpensesImplCopyWithImpl<$Res> extends _$GetExpensesEventCopyWithImpl<$Res, _$GetExpensesImpl>
-    implements _$$GetExpensesImplCopyWith<$Res> {
-  __$$GetExpensesImplCopyWithImpl(_$GetExpensesImpl _value, $Res Function(_$GetExpensesImpl) _then)
+class __$$GetLastTenExpensesTitleEventImplCopyWithImpl<$Res>
+    extends _$GetLastTenExpensesTitleEventCopyWithImpl<$Res, _$GetLastTenExpensesTitleEventImpl>
+    implements _$$GetLastTenExpensesTitleEventImplCopyWith<$Res> {
+  __$$GetLastTenExpensesTitleEventImplCopyWithImpl(
+      _$GetLastTenExpensesTitleEventImpl _value, $Res Function(_$GetLastTenExpensesTitleEventImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$GetExpensesImpl implements _GetExpenses {
-  const _$GetExpensesImpl();
+class _$GetLastTenExpensesTitleEventImpl implements _GetLastTenExpensesTitleEvent {
+  const _$GetLastTenExpensesTitleEventImpl();
 
   @override
   String toString() {
-    return 'GetExpensesEvent.getExpenses()';
+    return 'GetLastTenExpensesTitleEvent.getLastTenExpensesTitleEvent()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetExpensesImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetLastTenExpensesTitleEventImpl);
   }
 
   @override
@@ -100,27 +105,27 @@ class _$GetExpensesImpl implements _GetExpenses {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() getExpenses,
+    required TResult Function() getLastTenExpensesTitleEvent,
   }) {
-    return getExpenses();
+    return getLastTenExpensesTitleEvent();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? getExpenses,
+    TResult? Function()? getLastTenExpensesTitleEvent,
   }) {
-    return getExpenses?.call();
+    return getLastTenExpensesTitleEvent?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? getExpenses,
+    TResult Function()? getLastTenExpensesTitleEvent,
     required TResult orElse(),
   }) {
-    if (getExpenses != null) {
-      return getExpenses();
+    if (getLastTenExpensesTitleEvent != null) {
+      return getLastTenExpensesTitleEvent();
     }
     return orElse();
   }
@@ -128,87 +133,89 @@ class _$GetExpensesImpl implements _GetExpenses {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetExpenses value) getExpenses,
+    required TResult Function(_GetLastTenExpensesTitleEvent value) getLastTenExpensesTitleEvent,
   }) {
-    return getExpenses(this);
+    return getLastTenExpensesTitleEvent(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetExpenses value)? getExpenses,
+    TResult? Function(_GetLastTenExpensesTitleEvent value)? getLastTenExpensesTitleEvent,
   }) {
-    return getExpenses?.call(this);
+    return getLastTenExpensesTitleEvent?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetExpenses value)? getExpenses,
+    TResult Function(_GetLastTenExpensesTitleEvent value)? getLastTenExpensesTitleEvent,
     required TResult orElse(),
   }) {
-    if (getExpenses != null) {
-      return getExpenses(this);
+    if (getLastTenExpensesTitleEvent != null) {
+      return getLastTenExpensesTitleEvent(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetExpenses implements GetExpensesEvent {
-  const factory _GetExpenses() = _$GetExpensesImpl;
+abstract class _GetLastTenExpensesTitleEvent implements GetLastTenExpensesTitleEvent {
+  const factory _GetLastTenExpensesTitleEvent() = _$GetLastTenExpensesTitleEventImpl;
 }
 
 /// @nodoc
-mixin _$GetExpensesState {
+mixin _$GetLastTenExpensesTitleState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CommonState commonState) commonState,
-    required TResult Function(List<ExpenseDto> expenses) expensesLoaded,
+    required TResult Function(List<Title> expenses) expensesTitleLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(CommonState commonState)? commonState,
-    TResult? Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult? Function(List<Title> expenses)? expensesTitleLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(CommonState commonState)? commonState,
-    TResult Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult Function(List<Title> expenses)? expensesTitleLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonState value) commonState,
-    required TResult Function(_ExpensesLoaded value) expensesLoaded,
+    required TResult Function(_ExpensesTitleLoaded value) expensesTitleLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonState value)? commonState,
-    TResult? Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult? Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonState value)? commonState,
-    TResult Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetExpensesStateCopyWith<$Res> {
-  factory $GetExpensesStateCopyWith(GetExpensesState value, $Res Function(GetExpensesState) then) =
-      _$GetExpensesStateCopyWithImpl<$Res, GetExpensesState>;
+abstract class $GetLastTenExpensesTitleStateCopyWith<$Res> {
+  factory $GetLastTenExpensesTitleStateCopyWith(
+          GetLastTenExpensesTitleState value, $Res Function(GetLastTenExpensesTitleState) then) =
+      _$GetLastTenExpensesTitleStateCopyWithImpl<$Res, GetLastTenExpensesTitleState>;
 }
 
 /// @nodoc
-class _$GetExpensesStateCopyWithImpl<$Res, $Val extends GetExpensesState> implements $GetExpensesStateCopyWith<$Res> {
-  _$GetExpensesStateCopyWithImpl(this._value, this._then);
+class _$GetLastTenExpensesTitleStateCopyWithImpl<$Res, $Val extends GetLastTenExpensesTitleState>
+    implements $GetLastTenExpensesTitleStateCopyWith<$Res> {
+  _$GetLastTenExpensesTitleStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -227,7 +234,7 @@ abstract class _$$CommonStateImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CommonStateImplCopyWithImpl<$Res> extends _$GetExpensesStateCopyWithImpl<$Res, _$CommonStateImpl>
+class __$$CommonStateImplCopyWithImpl<$Res> extends _$GetLastTenExpensesTitleStateCopyWithImpl<$Res, _$CommonStateImpl>
     implements _$$CommonStateImplCopyWith<$Res> {
   __$$CommonStateImplCopyWithImpl(_$CommonStateImpl _value, $Res Function(_$CommonStateImpl) _then)
       : super(_value, _then);
@@ -264,7 +271,7 @@ class _$CommonStateImpl implements _CommonState {
 
   @override
   String toString() {
-    return 'GetExpensesState.commonState(commonState: $commonState)';
+    return 'GetLastTenExpensesTitleState.commonState(commonState: $commonState)';
   }
 
   @override
@@ -288,7 +295,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CommonState commonState) commonState,
-    required TResult Function(List<ExpenseDto> expenses) expensesLoaded,
+    required TResult Function(List<Title> expenses) expensesTitleLoaded,
   }) {
     return commonState(this.commonState);
   }
@@ -297,7 +304,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(CommonState commonState)? commonState,
-    TResult? Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult? Function(List<Title> expenses)? expensesTitleLoaded,
   }) {
     return commonState?.call(this.commonState);
   }
@@ -306,7 +313,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(CommonState commonState)? commonState,
-    TResult Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult Function(List<Title> expenses)? expensesTitleLoaded,
     required TResult orElse(),
   }) {
     if (commonState != null) {
@@ -319,7 +326,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonState value) commonState,
-    required TResult Function(_ExpensesLoaded value) expensesLoaded,
+    required TResult Function(_ExpensesTitleLoaded value) expensesTitleLoaded,
   }) {
     return commonState(this);
   }
@@ -328,7 +335,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonState value)? commonState,
-    TResult? Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult? Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
   }) {
     return commonState?.call(this);
   }
@@ -337,7 +344,7 @@ class _$CommonStateImpl implements _CommonState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonState value)? commonState,
-    TResult Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
     required TResult orElse(),
   }) {
     if (commonState != null) {
@@ -347,7 +354,7 @@ class _$CommonStateImpl implements _CommonState {
   }
 }
 
-abstract class _CommonState implements GetExpensesState {
+abstract class _CommonState implements GetLastTenExpensesTitleState {
   const factory _CommonState({required final CommonState commonState}) = _$CommonStateImpl;
 
   CommonState get commonState;
@@ -356,17 +363,20 @@ abstract class _CommonState implements GetExpensesState {
 }
 
 /// @nodoc
-abstract class _$$ExpensesLoadedImplCopyWith<$Res> {
-  factory _$$ExpensesLoadedImplCopyWith(_$ExpensesLoadedImpl value, $Res Function(_$ExpensesLoadedImpl) then) =
-      __$$ExpensesLoadedImplCopyWithImpl<$Res>;
+abstract class _$$ExpensesTitleLoadedImplCopyWith<$Res> {
+  factory _$$ExpensesTitleLoadedImplCopyWith(
+          _$ExpensesTitleLoadedImpl value, $Res Function(_$ExpensesTitleLoadedImpl) then) =
+      __$$ExpensesTitleLoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<ExpenseDto> expenses});
+  $Res call({List<Title> expenses});
 }
 
 /// @nodoc
-class __$$ExpensesLoadedImplCopyWithImpl<$Res> extends _$GetExpensesStateCopyWithImpl<$Res, _$ExpensesLoadedImpl>
-    implements _$$ExpensesLoadedImplCopyWith<$Res> {
-  __$$ExpensesLoadedImplCopyWithImpl(_$ExpensesLoadedImpl _value, $Res Function(_$ExpensesLoadedImpl) _then)
+class __$$ExpensesTitleLoadedImplCopyWithImpl<$Res>
+    extends _$GetLastTenExpensesTitleStateCopyWithImpl<$Res, _$ExpensesTitleLoadedImpl>
+    implements _$$ExpensesTitleLoadedImplCopyWith<$Res> {
+  __$$ExpensesTitleLoadedImplCopyWithImpl(
+      _$ExpensesTitleLoadedImpl _value, $Res Function(_$ExpensesTitleLoadedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -374,23 +384,23 @@ class __$$ExpensesLoadedImplCopyWithImpl<$Res> extends _$GetExpensesStateCopyWit
   $Res call({
     Object? expenses = null,
   }) {
-    return _then(_$ExpensesLoadedImpl(
+    return _then(_$ExpensesTitleLoadedImpl(
       null == expenses
           ? _value._expenses
           : expenses // ignore: cast_nullable_to_non_nullable
-              as List<ExpenseDto>,
+              as List<Title>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$ExpensesLoadedImpl implements _ExpensesLoaded {
-  const _$ExpensesLoadedImpl(final List<ExpenseDto> expenses) : _expenses = expenses;
+class _$ExpensesTitleLoadedImpl implements _ExpensesTitleLoaded {
+  const _$ExpensesTitleLoadedImpl(final List<Title> expenses) : _expenses = expenses;
 
-  final List<ExpenseDto> _expenses;
+  final List<Title> _expenses;
   @override
-  List<ExpenseDto> get expenses {
+  List<Title> get expenses {
     if (_expenses is EqualUnmodifiableListView) return _expenses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_expenses);
@@ -398,14 +408,14 @@ class _$ExpensesLoadedImpl implements _ExpensesLoaded {
 
   @override
   String toString() {
-    return 'GetExpensesState.expensesLoaded(expenses: $expenses)';
+    return 'GetLastTenExpensesTitleState.expensesTitleLoaded(expenses: $expenses)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ExpensesLoadedImpl &&
+            other is _$ExpensesTitleLoadedImpl &&
             const DeepCollectionEquality().equals(other._expenses, _expenses));
   }
 
@@ -415,36 +425,36 @@ class _$ExpensesLoadedImpl implements _ExpensesLoaded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ExpensesLoadedImplCopyWith<_$ExpensesLoadedImpl> get copyWith =>
-      __$$ExpensesLoadedImplCopyWithImpl<_$ExpensesLoadedImpl>(this, _$identity);
+  _$$ExpensesTitleLoadedImplCopyWith<_$ExpensesTitleLoadedImpl> get copyWith =>
+      __$$ExpensesTitleLoadedImplCopyWithImpl<_$ExpensesTitleLoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CommonState commonState) commonState,
-    required TResult Function(List<ExpenseDto> expenses) expensesLoaded,
+    required TResult Function(List<Title> expenses) expensesTitleLoaded,
   }) {
-    return expensesLoaded(expenses);
+    return expensesTitleLoaded(expenses);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(CommonState commonState)? commonState,
-    TResult? Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult? Function(List<Title> expenses)? expensesTitleLoaded,
   }) {
-    return expensesLoaded?.call(expenses);
+    return expensesTitleLoaded?.call(expenses);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(CommonState commonState)? commonState,
-    TResult Function(List<ExpenseDto> expenses)? expensesLoaded,
+    TResult Function(List<Title> expenses)? expensesTitleLoaded,
     required TResult orElse(),
   }) {
-    if (expensesLoaded != null) {
-      return expensesLoaded(expenses);
+    if (expensesTitleLoaded != null) {
+      return expensesTitleLoaded(expenses);
     }
     return orElse();
   }
@@ -453,38 +463,38 @@ class _$ExpensesLoadedImpl implements _ExpensesLoaded {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_CommonState value) commonState,
-    required TResult Function(_ExpensesLoaded value) expensesLoaded,
+    required TResult Function(_ExpensesTitleLoaded value) expensesTitleLoaded,
   }) {
-    return expensesLoaded(this);
+    return expensesTitleLoaded(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_CommonState value)? commonState,
-    TResult? Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult? Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
   }) {
-    return expensesLoaded?.call(this);
+    return expensesTitleLoaded?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_CommonState value)? commonState,
-    TResult Function(_ExpensesLoaded value)? expensesLoaded,
+    TResult Function(_ExpensesTitleLoaded value)? expensesTitleLoaded,
     required TResult orElse(),
   }) {
-    if (expensesLoaded != null) {
-      return expensesLoaded(this);
+    if (expensesTitleLoaded != null) {
+      return expensesTitleLoaded(this);
     }
     return orElse();
   }
 }
 
-abstract class _ExpensesLoaded implements GetExpensesState {
-  const factory _ExpensesLoaded(final List<ExpenseDto> expenses) = _$ExpensesLoadedImpl;
+abstract class _ExpensesTitleLoaded implements GetLastTenExpensesTitleState {
+  const factory _ExpensesTitleLoaded(final List<Title> expenses) = _$ExpensesTitleLoadedImpl;
 
-  List<ExpenseDto> get expenses;
+  List<Title> get expenses;
   @JsonKey(ignore: true)
-  _$$ExpensesLoadedImplCopyWith<_$ExpensesLoadedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExpensesTitleLoadedImplCopyWith<_$ExpensesTitleLoadedImpl> get copyWith => throw _privateConstructorUsedError;
 }

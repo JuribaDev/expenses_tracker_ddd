@@ -1,6 +1,6 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/update_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/update_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/core/error_handling/failure.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/update_expense_bloc/update_expense_bloc.dart';
@@ -10,7 +10,6 @@ import 'package:mocktail/mocktail.dart';
 
 import '../../../../helpers/helpers.dart';
 
-// Mock the UpdateExpenseUseCase
 class MockUpdateExpenseUseCase extends Mock implements UpdateExpenseUseCase {}
 
 void main() {

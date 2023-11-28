@@ -3,7 +3,7 @@
 import 'dart:async';
 
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/watch_last_month_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/watch_last_month_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/core/utils/either.dart';
 import 'package:expenses_tracker_ddd/domain/expense/entity/expense_entity.dart';
 import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';

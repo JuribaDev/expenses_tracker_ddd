@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/application/expense/watch_last_month_expenses_use_case.dart';
+import 'package:expenses_tracker_ddd/application/expense/use_case/watch_last_month_expenses_use_case.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/core/states/common_state.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
