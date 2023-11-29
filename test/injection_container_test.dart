@@ -32,7 +32,7 @@ void main() {
       final instance = sl<DriftLocalDatabaseManager>();
       expect(instance, isNotNull);
       expect(instance, isA<DriftLocalDatabaseManager>());
-      verify(() => logger.i('Other platforms production db created successfully')).called(1);
+      verify(() => logger.i('In memory db created successfully')).called(1);
     });
 
     test('should register ExpenseLocalRepositoryImpl', () {
@@ -84,32 +84,9 @@ void main() {
     });
 
     test('should register GetExpensesBloc', () {
-      final instance = sl<GetExpensesBloc>();
+      final instance = sl<ExpenseBloc>();
       expect(instance, isNotNull);
-      expect(instance, isA<GetExpensesBloc>());
-    });
-
-    test('should register GetLastTenExpensesTitleBloc', () {
-      final instance = sl<GetLastTenExpensesTitleBloc>();
-      expect(instance, isNotNull);
-      expect(instance, isA<GetLastTenExpensesTitleBloc>());
-    });
-
-    test('should register AddExpenseBloc', () {
-      final instance = sl<AddExpenseBloc>();
-      expect(instance, isNotNull);
-      expect(instance, isA<AddExpenseBloc>());
-    });
-
-    test('should register UpdateExpenseBloc', () {
-      final instance = sl<UpdateExpenseBloc>();
-      expect(instance, isNotNull);
-      expect(instance, isA<UpdateExpenseBloc>());
-    });
-    test('should register DeleteExpenseBloc', () {
-      final instance = sl<DeleteExpenseBloc>();
-      expect(instance, isNotNull);
-      expect(instance, isA<DeleteExpenseBloc>());
+      expect(instance, isA<ExpenseBloc>());
     });
   });
 }

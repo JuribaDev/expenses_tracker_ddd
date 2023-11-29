@@ -25,9 +25,6 @@ class Amount extends ValueObject<double> {
     if (_amountIsZero(amount)) {
       return Left(ValidationException('Amount can not be zero.'));
     }
-    if (_amountHasTwoDecimalPlaces(amount)) {
-      return Left(ValidationException('Amount can not have more than 2 decimal places.'));
-    }
     if (_amountIsGreaterThanMaxAmount(amount)) {
       return Left(ValidationException('Amount can not be greater than $maxAmount.'));
     }
@@ -35,8 +32,6 @@ class Amount extends ValueObject<double> {
   }
 
   static bool _isAmountNegative(double amount) => amount < 0;
-
-  static bool _amountHasTwoDecimalPlaces(double amount) => amount.toString().split('.').last.length > 2;
 
   static bool _amountIsGreaterThanMaxAmount(double amount) => amount > maxAmount;
 

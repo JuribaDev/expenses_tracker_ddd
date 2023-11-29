@@ -33,10 +33,6 @@ Future<void> injectMultiPlatformDependencies(
   sl.registerFactory<UpdateExpenseUseCase>(() => UpdateExpenseUseCase(sl()));
   sl.registerFactory<DeleteExpenseUseCase>(() => DeleteExpenseUseCase(sl()));
   // Presentation layer
-  sl.registerFactory<WatchLastMonthExpensesBloc>(() => WatchLastMonthExpensesBloc(sl()));
-  sl.registerFactory<GetExpensesBloc>(() => GetExpensesBloc(sl()));
-  sl.registerFactory<GetLastTenExpensesTitleBloc>(() => GetLastTenExpensesTitleBloc(sl()));
-  sl.registerFactory<AddExpenseBloc>(() => AddExpenseBloc(sl()));
-  sl.registerFactory<UpdateExpenseBloc>(() => UpdateExpenseBloc(sl()));
-  sl.registerFactory<DeleteExpenseBloc>(() => DeleteExpenseBloc(sl()));
+  sl.registerLazySingleton<WatchLastMonthExpensesBloc>(() => WatchLastMonthExpensesBloc(sl()));
+  sl.registerLazySingleton<ExpenseBloc>(() => ExpenseBloc(sl(), sl(), sl(), sl()));
 }

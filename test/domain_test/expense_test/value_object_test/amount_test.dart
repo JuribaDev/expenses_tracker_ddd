@@ -27,12 +27,6 @@ void main() {
       expect(result.left.message, 'Amount can not be zero.');
     });
 
-    test('Should return a ValidationException when the amount has more than two decimal places', () {
-      final result = Amount.create('10.123');
-      expect(result.isLeft, true);
-      expect(result.left.message, 'Amount can not have more than 2 decimal places.');
-    });
-
     test('Should return a ValidationException when the amount is greater than the max amount', () {
       final result = Amount.create('100000000');
       expect(result.isLeft, true);

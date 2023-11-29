@@ -27,7 +27,7 @@ void main() {
       final db = DriftLocalDatabaseManager(impl.connect(mockLogger));
       // Assert
       expect(db, isNotNull);
-      verify(() => mockLogger.i('Other platforms production db created successfully')).called(1);
+      verify(() => mockLogger.i('In memory db created successfully')).called(1);
       await db.close();
     });
   });

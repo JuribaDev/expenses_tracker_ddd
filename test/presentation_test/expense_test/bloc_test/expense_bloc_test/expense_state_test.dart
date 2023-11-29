@@ -1,5 +1,5 @@
 import 'package:expenses_tracker_ddd/application/expense/dto/expense_dto.dart';
-import 'package:expenses_tracker_ddd/presentation/expense/bloc/get_expenses_bloc/get_expenses_bloc.dart';
+import 'package:expenses_tracker_ddd/presentation/expense/bloc/expense_bloc/expense_bloc.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/core/states/common_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -7,12 +7,12 @@ void main() {
   group('GetExpensesState', () {
     test('commonState supports value comparisons', () {
       expect(
-        const GetExpensesState.commonState(commonState: CommonState.initial()),
-        const GetExpensesState.commonState(commonState: CommonState.initial()),
+        const ExpensesState.commonState(commonState: CommonState.initial()),
+        const ExpensesState.commonState(commonState: CommonState.initial()),
       );
       expect(
-        const GetExpensesState.commonState(commonState: CommonState.loading()),
-        isNot(const GetExpensesState.commonState(commonState: CommonState.initial())),
+        const ExpensesState.commonState(commonState: CommonState.loading()),
+        isNot(const ExpensesState.commonState(commonState: CommonState.initial())),
       );
     });
 
@@ -27,16 +27,16 @@ void main() {
       ];
 
       expect(
-        GetExpensesState.expensesLoaded(expensesList1),
-        GetExpensesState.expensesLoaded(expensesList2),
+        ExpensesState.expensesLoaded(expensesList1),
+        ExpensesState.expensesLoaded(expensesList2),
       );
 
       final differentExpensesList = [
         ExpenseDto(id: 3, title: 'Rent', amount: '500', date: DateTime(2022, 1, 3)),
       ];
       expect(
-        GetExpensesState.expensesLoaded(expensesList1),
-        isNot(GetExpensesState.expensesLoaded(differentExpensesList)),
+        ExpensesState.expensesLoaded(expensesList1),
+        isNot(ExpensesState.expensesLoaded(differentExpensesList)),
       );
     });
   });
