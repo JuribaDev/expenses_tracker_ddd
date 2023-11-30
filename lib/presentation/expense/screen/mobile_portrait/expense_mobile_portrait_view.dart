@@ -1,4 +1,4 @@
-// ignore_for_file: inference_failure_on_function_invocation
+// ignore_for_file: inference_failure_on_function_invocation, inference_failure_on_instance_creation
 
 import 'package:expenses_tracker_ddd/presentation/expense/screen/widget/add_or_update_expense_widget.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/screen/widget/expenses_list.dart';
@@ -15,13 +15,18 @@ class ExpenseMobilePortraitView extends HookWidget {
       child: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title: const Text('Expense Tracker'),
           ),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Theme.of(context).colorScheme.onBackground,
-            onPressed: () =>
-                showModalBottomSheet(context: context, builder: (BuildContext context) => AddOrUpdateExpenseWidget()),
+            onPressed: () => Navigator.of(context).push(
+              ModalBottomSheetRoute(
+                builder: (context) => AddOrUpdateExpenseWidget(),
+                isScrollControlled: true,
+              ),
+            ),
             child: Icon(Icons.add, color: Theme.of(context).colorScheme.background),
           ),
           body: Padding(

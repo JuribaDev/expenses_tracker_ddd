@@ -16,7 +16,7 @@ class AppInitializer {
     try {
       await injectMultiPlatformDependencies(logger, env: env, sl: sl);
     } catch (e, stackTrace) {
-      logger.e('Specific error occurred in initializeDependencies: $e, stackTrace: $stackTrace');
+      logger.e('Specific error occurred in injectMultiPlatformDependencies: $e, stackTrace: $stackTrace');
       // ToDo: Display an Error screen, including a way to let the development team know that the app has crashed.
     }
   }
