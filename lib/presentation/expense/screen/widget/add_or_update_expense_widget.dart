@@ -13,12 +13,12 @@ class AddOrUpdateExpenseWidget extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = sl<ExpenseBloc>();
-
+    final focus = useFocusNode();
     final titleController = useTextEditingController();
     final amountController = useTextEditingController();
     var now = DateTime.now();
     useEffect(() {
+      focus.requestFocus();
       if (expenseDto != null) {
         titleController.text = expenseDto!.title;
         amountController.text = expenseDto!.amount;
@@ -27,35 +27,52 @@ class AddOrUpdateExpenseWidget extends HookWidget {
       return;
     });
 
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.6,
+    return DraggableScrollableSheet(
+      expand: false,
+      builder: (context, scrollController) => SingleChildScrollView(
+        controller: scrollController,
+        physics: const BouncingScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.only(top: 4, left: 16, right: 16, bottom: 8),
           child: Form(
             key: formKey,
             child: Column(
-              children: [
-                const SizedBox(height: 10),
-                const Text('Add New Expense'),
+              children: <Widget>[
+                const Icon(
+                  Icons.maximize,
+                  size: 20,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  expenseDto != null ? 'Update Expense' : 'Add New Expense',
+                ),
                 const SizedBox(height: 10),
                 TextFormField(
+                  focusNode: focus,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   controller: titleController,
+                  textInputAction: TextInputAction.next,
                   validator: validateTitleOnChange,
                   decoration: const InputDecoration(hintText: 'Title'),
                 ),
                 const SizedBox(height: 10),
                 TextFormField(
-                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   controller: amountController,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.number,
                   validator: validateAmountOnChange,
                   decoration: const InputDecoration(hintText: 'Amount'),
-                  onFieldSubmitted: (_) => FocusScope.of(context).unfocus(),
+                  onFieldSubmitted: (_) {
+                    FocusScope.of(context).unfocus();
+                    addOrUpdate(context, titleController.text, amountController.text, now);
+                  },
                 ),
-                const SizedBox(height: 150),
+                const SizedBox(
+                  height: 50,
+                ),
                 SizedBox(
                   width: double.infinity,
                   height: 50,
@@ -64,45 +81,49 @@ class AddOrUpdateExpenseWidget extends HookWidget {
                       backgroundColor: Theme.of(context).colorScheme.onBackground,
                       foregroundColor: Theme.of(context).colorScheme.background,
                     ),
-                    onPressed: () {
-                      if (formKey.currentState!.validate()) {
-                        if (expenseDto != null) {
-                          bloc.add(
-                            ExpensesEvent.updateExpense(
-                              ExpenseDto(
-                                id: expenseDto!.id,
-                                title: titleController.text,
-                                amount: amountController.text,
-                                date: now,
-                              ),
-                            ),
-                          );
-                        } else {
-                          bloc.add(
-                            ExpensesEvent.addExpense(
-                              ExpenseDto(
-                                title: titleController.text,
-                                amount: amountController.text,
-                                date: now,
-                              ),
-                            ),
-                          );
-                        }
-                        Navigator.pop(context);
-                      }
-                    },
+                    onPressed: () => addOrUpdate(context, titleController.text, amountController.text, now),
                     child: const Text(
                       'Add new expense',
                       style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                // const SizedBox(height: 10),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  void addOrUpdate(BuildContext context, String title, String amount, DateTime createdAt) {
+    {
+      if (formKey.currentState!.validate()) {
+        if (expenseDto != null) {
+          sl<ExpenseBloc>().add(
+            ExpensesEvent.updateExpense(
+              ExpenseDto(
+                id: expenseDto!.id,
+                title: title,
+                amount: amount,
+                date: DateTime.now(),
+              ),
+            ),
+          );
+        } else {
+          sl<ExpenseBloc>().add(
+            ExpensesEvent.addExpense(
+              ExpenseDto(
+                title: title,
+                amount: amount,
+                date: createdAt,
+              ),
+            ),
+          );
+        }
+        Navigator.pop(context);
+      }
+    }
   }
 }
