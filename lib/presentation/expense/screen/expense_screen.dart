@@ -1,6 +1,7 @@
 import 'package:expenses_tracker_ddd/app_initializer.dart';
 import 'package:expenses_tracker_ddd/core/widgets/responsive_layout_wrapper.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/expense_bloc.dart';
+import 'package:expenses_tracker_ddd/presentation/expense/bloc/expense_validation_bloc/expense_validation_bloc.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/screen/mobile_portrait/expense_mobile_portrait_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,8 +11,13 @@ class ExpenseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<ExpenseBloc>(
-      create: (context) => sl<ExpenseBloc>()..add(const ExpensesEvent.getExpenses()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<ExpenseBloc>(
+          create: (context) => sl<ExpenseBloc>()..add(const ExpensesEvent.getExpenses()),
+        ),
+        BlocProvider<ExpenseValidationBloc>(create: (context) => sl<ExpenseValidationBloc>())
+      ],
       child: const ResponsiveLayoutWrapper(
         mobilePortraitLayout: ExpenseMobilePortraitView(),
         mobileLandscapeLayout: ExpenseMobilePortraitView(),

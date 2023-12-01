@@ -70,12 +70,14 @@ mixin _$ExpensesEvent {
 
 /// @nodoc
 abstract class $ExpensesEventCopyWith<$Res> {
-  factory $ExpensesEventCopyWith(ExpensesEvent value, $Res Function(ExpensesEvent) then) =
+  factory $ExpensesEventCopyWith(
+          ExpensesEvent value, $Res Function(ExpensesEvent) then) =
       _$ExpensesEventCopyWithImpl<$Res, ExpensesEvent>;
 }
 
 /// @nodoc
-class _$ExpensesEventCopyWithImpl<$Res, $Val extends ExpensesEvent> implements $ExpensesEventCopyWith<$Res> {
+class _$ExpensesEventCopyWithImpl<$Res, $Val extends ExpensesEvent>
+    implements $ExpensesEventCopyWith<$Res> {
   _$ExpensesEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -86,14 +88,17 @@ class _$ExpensesEventCopyWithImpl<$Res, $Val extends ExpensesEvent> implements $
 
 /// @nodoc
 abstract class _$$GetExpensesImplCopyWith<$Res> {
-  factory _$$GetExpensesImplCopyWith(_$GetExpensesImpl value, $Res Function(_$GetExpensesImpl) then) =
+  factory _$$GetExpensesImplCopyWith(
+          _$GetExpensesImpl value, $Res Function(_$GetExpensesImpl) then) =
       __$$GetExpensesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetExpensesImplCopyWithImpl<$Res> extends _$ExpensesEventCopyWithImpl<$Res, _$GetExpensesImpl>
+class __$$GetExpensesImplCopyWithImpl<$Res>
+    extends _$ExpensesEventCopyWithImpl<$Res, _$GetExpensesImpl>
     implements _$$GetExpensesImplCopyWith<$Res> {
-  __$$GetExpensesImplCopyWithImpl(_$GetExpensesImpl _value, $Res Function(_$GetExpensesImpl) _then)
+  __$$GetExpensesImplCopyWithImpl(
+      _$GetExpensesImpl _value, $Res Function(_$GetExpensesImpl) _then)
       : super(_value, _then);
 }
 
@@ -109,7 +114,8 @@ class _$GetExpensesImpl implements _GetExpenses {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetExpensesImpl);
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetExpensesImpl);
   }
 
   @override
@@ -196,16 +202,20 @@ abstract class _GetExpenses implements ExpensesEvent {
 
 /// @nodoc
 abstract class _$$AddExpenseImplCopyWith<$Res> {
-  factory _$$AddExpenseImplCopyWith(_$AddExpenseImpl value, $Res Function(_$AddExpenseImpl) then) =
+  factory _$$AddExpenseImplCopyWith(
+          _$AddExpenseImpl value, $Res Function(_$AddExpenseImpl) then) =
       __$$AddExpenseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ExpenseDto expenseDto});
 }
 
 /// @nodoc
-class __$$AddExpenseImplCopyWithImpl<$Res> extends _$ExpensesEventCopyWithImpl<$Res, _$AddExpenseImpl>
+class __$$AddExpenseImplCopyWithImpl<$Res>
+    extends _$ExpensesEventCopyWithImpl<$Res, _$AddExpenseImpl>
     implements _$$AddExpenseImplCopyWith<$Res> {
-  __$$AddExpenseImplCopyWithImpl(_$AddExpenseImpl _value, $Res Function(_$AddExpenseImpl) _then) : super(_value, _then);
+  __$$AddExpenseImplCopyWithImpl(
+      _$AddExpenseImpl _value, $Res Function(_$AddExpenseImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -239,7 +249,8 @@ class _$AddExpenseImpl implements _AddExpense {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AddExpenseImpl &&
-            (identical(other.expenseDto, expenseDto) || other.expenseDto == expenseDto));
+            (identical(other.expenseDto, expenseDto) ||
+                other.expenseDto == expenseDto));
   }
 
   @override
@@ -331,21 +342,25 @@ abstract class _AddExpense implements ExpensesEvent {
 
   ExpenseDto get expenseDto;
   @JsonKey(ignore: true)
-  _$$AddExpenseImplCopyWith<_$AddExpenseImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$AddExpenseImplCopyWith<_$AddExpenseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$DeleteExpenseImplCopyWith<$Res> {
-  factory _$$DeleteExpenseImplCopyWith(_$DeleteExpenseImpl value, $Res Function(_$DeleteExpenseImpl) then) =
+  factory _$$DeleteExpenseImplCopyWith(
+          _$DeleteExpenseImpl value, $Res Function(_$DeleteExpenseImpl) then) =
       __$$DeleteExpenseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int id});
 }
 
 /// @nodoc
-class __$$DeleteExpenseImplCopyWithImpl<$Res> extends _$ExpensesEventCopyWithImpl<$Res, _$DeleteExpenseImpl>
+class __$$DeleteExpenseImplCopyWithImpl<$Res>
+    extends _$ExpensesEventCopyWithImpl<$Res, _$DeleteExpenseImpl>
     implements _$$DeleteExpenseImplCopyWith<$Res> {
-  __$$DeleteExpenseImplCopyWithImpl(_$DeleteExpenseImpl _value, $Res Function(_$DeleteExpenseImpl) _then)
+  __$$DeleteExpenseImplCopyWithImpl(
+      _$DeleteExpenseImpl _value, $Res Function(_$DeleteExpenseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -472,21 +487,25 @@ abstract class _DeleteExpense implements ExpensesEvent {
 
   int get id;
   @JsonKey(ignore: true)
-  _$$DeleteExpenseImplCopyWith<_$DeleteExpenseImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$DeleteExpenseImplCopyWith<_$DeleteExpenseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$UpdateExpenseImplCopyWith<$Res> {
-  factory _$$UpdateExpenseImplCopyWith(_$UpdateExpenseImpl value, $Res Function(_$UpdateExpenseImpl) then) =
+  factory _$$UpdateExpenseImplCopyWith(
+          _$UpdateExpenseImpl value, $Res Function(_$UpdateExpenseImpl) then) =
       __$$UpdateExpenseImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ExpenseDto expenseDto});
 }
 
 /// @nodoc
-class __$$UpdateExpenseImplCopyWithImpl<$Res> extends _$ExpensesEventCopyWithImpl<$Res, _$UpdateExpenseImpl>
+class __$$UpdateExpenseImplCopyWithImpl<$Res>
+    extends _$ExpensesEventCopyWithImpl<$Res, _$UpdateExpenseImpl>
     implements _$$UpdateExpenseImplCopyWith<$Res> {
-  __$$UpdateExpenseImplCopyWithImpl(_$UpdateExpenseImpl _value, $Res Function(_$UpdateExpenseImpl) _then)
+  __$$UpdateExpenseImplCopyWithImpl(
+      _$UpdateExpenseImpl _value, $Res Function(_$UpdateExpenseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -521,7 +540,8 @@ class _$UpdateExpenseImpl implements _UpdateExpense {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UpdateExpenseImpl &&
-            (identical(other.expenseDto, expenseDto) || other.expenseDto == expenseDto));
+            (identical(other.expenseDto, expenseDto) ||
+                other.expenseDto == expenseDto));
   }
 
   @override
@@ -609,11 +629,13 @@ class _$UpdateExpenseImpl implements _UpdateExpense {
 }
 
 abstract class _UpdateExpense implements ExpensesEvent {
-  const factory _UpdateExpense(final ExpenseDto expenseDto) = _$UpdateExpenseImpl;
+  const factory _UpdateExpense(final ExpenseDto expenseDto) =
+      _$UpdateExpenseImpl;
 
   ExpenseDto get expenseDto;
   @JsonKey(ignore: true)
-  _$$UpdateExpenseImplCopyWith<_$UpdateExpenseImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$UpdateExpenseImplCopyWith<_$UpdateExpenseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -678,12 +700,14 @@ mixin _$ExpensesState {
 
 /// @nodoc
 abstract class $ExpensesStateCopyWith<$Res> {
-  factory $ExpensesStateCopyWith(ExpensesState value, $Res Function(ExpensesState) then) =
+  factory $ExpensesStateCopyWith(
+          ExpensesState value, $Res Function(ExpensesState) then) =
       _$ExpensesStateCopyWithImpl<$Res, ExpensesState>;
 }
 
 /// @nodoc
-class _$ExpensesStateCopyWithImpl<$Res, $Val extends ExpensesState> implements $ExpensesStateCopyWith<$Res> {
+class _$ExpensesStateCopyWithImpl<$Res, $Val extends ExpensesState>
+    implements $ExpensesStateCopyWith<$Res> {
   _$ExpensesStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -694,7 +718,8 @@ class _$ExpensesStateCopyWithImpl<$Res, $Val extends ExpensesState> implements $
 
 /// @nodoc
 abstract class _$$CommonStateImplCopyWith<$Res> {
-  factory _$$CommonStateImplCopyWith(_$CommonStateImpl value, $Res Function(_$CommonStateImpl) then) =
+  factory _$$CommonStateImplCopyWith(
+          _$CommonStateImpl value, $Res Function(_$CommonStateImpl) then) =
       __$$CommonStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CommonState commonState});
@@ -703,9 +728,11 @@ abstract class _$$CommonStateImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CommonStateImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithImpl<$Res, _$CommonStateImpl>
+class __$$CommonStateImplCopyWithImpl<$Res>
+    extends _$ExpensesStateCopyWithImpl<$Res, _$CommonStateImpl>
     implements _$$CommonStateImplCopyWith<$Res> {
-  __$$CommonStateImplCopyWithImpl(_$CommonStateImpl _value, $Res Function(_$CommonStateImpl) _then)
+  __$$CommonStateImplCopyWithImpl(
+      _$CommonStateImpl _value, $Res Function(_$CommonStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -748,7 +775,8 @@ class _$CommonStateImpl implements _CommonState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommonStateImpl &&
-            (identical(other.commonState, commonState) || other.commonState == commonState));
+            (identical(other.commonState, commonState) ||
+                other.commonState == commonState));
   }
 
   @override
@@ -842,25 +870,30 @@ class _$CommonStateImpl implements _CommonState {
 }
 
 abstract class _CommonState implements ExpensesState {
-  const factory _CommonState({required final CommonState commonState}) = _$CommonStateImpl;
+  const factory _CommonState({required final CommonState commonState}) =
+      _$CommonStateImpl;
 
   CommonState get commonState;
   @JsonKey(ignore: true)
-  _$$CommonStateImplCopyWith<_$CommonStateImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$CommonStateImplCopyWith<_$CommonStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ExpensesLoadedImplCopyWith<$Res> {
-  factory _$$ExpensesLoadedImplCopyWith(_$ExpensesLoadedImpl value, $Res Function(_$ExpensesLoadedImpl) then) =
+  factory _$$ExpensesLoadedImplCopyWith(_$ExpensesLoadedImpl value,
+          $Res Function(_$ExpensesLoadedImpl) then) =
       __$$ExpensesLoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<ExpenseDto> expense});
 }
 
 /// @nodoc
-class __$$ExpensesLoadedImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithImpl<$Res, _$ExpensesLoadedImpl>
+class __$$ExpensesLoadedImplCopyWithImpl<$Res>
+    extends _$ExpensesStateCopyWithImpl<$Res, _$ExpensesLoadedImpl>
     implements _$$ExpensesLoadedImplCopyWith<$Res> {
-  __$$ExpensesLoadedImplCopyWithImpl(_$ExpensesLoadedImpl _value, $Res Function(_$ExpensesLoadedImpl) _then)
+  __$$ExpensesLoadedImplCopyWithImpl(
+      _$ExpensesLoadedImpl _value, $Res Function(_$ExpensesLoadedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -880,7 +913,8 @@ class __$$ExpensesLoadedImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithIm
 /// @nodoc
 
 class _$ExpensesLoadedImpl implements _ExpensesLoaded {
-  const _$ExpensesLoadedImpl(final List<ExpenseDto> expense) : _expense = expense;
+  const _$ExpensesLoadedImpl(final List<ExpenseDto> expense)
+      : _expense = expense;
 
   final List<ExpenseDto> _expense;
   @override
@@ -904,13 +938,15 @@ class _$ExpensesLoadedImpl implements _ExpensesLoaded {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_expense));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_expense));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ExpensesLoadedImplCopyWith<_$ExpensesLoadedImpl> get copyWith =>
-      __$$ExpensesLoadedImplCopyWithImpl<_$ExpensesLoadedImpl>(this, _$identity);
+      __$$ExpensesLoadedImplCopyWithImpl<_$ExpensesLoadedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -994,25 +1030,30 @@ class _$ExpensesLoadedImpl implements _ExpensesLoaded {
 }
 
 abstract class _ExpensesLoaded implements ExpensesState {
-  const factory _ExpensesLoaded(final List<ExpenseDto> expense) = _$ExpensesLoadedImpl;
+  const factory _ExpensesLoaded(final List<ExpenseDto> expense) =
+      _$ExpensesLoadedImpl;
 
   List<ExpenseDto> get expense;
   @JsonKey(ignore: true)
-  _$$ExpensesLoadedImplCopyWith<_$ExpensesLoadedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExpensesLoadedImplCopyWith<_$ExpensesLoadedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ExpenseDeletedImplCopyWith<$Res> {
-  factory _$$ExpenseDeletedImplCopyWith(_$ExpenseDeletedImpl value, $Res Function(_$ExpenseDeletedImpl) then) =
+  factory _$$ExpenseDeletedImplCopyWith(_$ExpenseDeletedImpl value,
+          $Res Function(_$ExpenseDeletedImpl) then) =
       __$$ExpenseDeletedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ExpenseDeletedImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseDeletedImpl>
+class __$$ExpenseDeletedImplCopyWithImpl<$Res>
+    extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseDeletedImpl>
     implements _$$ExpenseDeletedImplCopyWith<$Res> {
-  __$$ExpenseDeletedImplCopyWithImpl(_$ExpenseDeletedImpl _value, $Res Function(_$ExpenseDeletedImpl) _then)
+  __$$ExpenseDeletedImplCopyWithImpl(
+      _$ExpenseDeletedImpl _value, $Res Function(_$ExpenseDeletedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1057,7 +1098,8 @@ class _$ExpenseDeletedImpl implements _ExpenseDeleted {
   @override
   @pragma('vm:prefer-inline')
   _$$ExpenseDeletedImplCopyWith<_$ExpenseDeletedImpl> get copyWith =>
-      __$$ExpenseDeletedImplCopyWithImpl<_$ExpenseDeletedImpl>(this, _$identity);
+      __$$ExpenseDeletedImplCopyWithImpl<_$ExpenseDeletedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1145,21 +1187,25 @@ abstract class _ExpenseDeleted implements ExpensesState {
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ExpenseDeletedImplCopyWith<_$ExpenseDeletedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExpenseDeletedImplCopyWith<_$ExpenseDeletedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ExpenseUpdatedImplCopyWith<$Res> {
-  factory _$$ExpenseUpdatedImplCopyWith(_$ExpenseUpdatedImpl value, $Res Function(_$ExpenseUpdatedImpl) then) =
+  factory _$$ExpenseUpdatedImplCopyWith(_$ExpenseUpdatedImpl value,
+          $Res Function(_$ExpenseUpdatedImpl) then) =
       __$$ExpenseUpdatedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ExpenseUpdatedImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseUpdatedImpl>
+class __$$ExpenseUpdatedImplCopyWithImpl<$Res>
+    extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseUpdatedImpl>
     implements _$$ExpenseUpdatedImplCopyWith<$Res> {
-  __$$ExpenseUpdatedImplCopyWithImpl(_$ExpenseUpdatedImpl _value, $Res Function(_$ExpenseUpdatedImpl) _then)
+  __$$ExpenseUpdatedImplCopyWithImpl(
+      _$ExpenseUpdatedImpl _value, $Res Function(_$ExpenseUpdatedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1204,7 +1250,8 @@ class _$ExpenseUpdatedImpl implements _ExpenseUpdated {
   @override
   @pragma('vm:prefer-inline')
   _$$ExpenseUpdatedImplCopyWith<_$ExpenseUpdatedImpl> get copyWith =>
-      __$$ExpenseUpdatedImplCopyWithImpl<_$ExpenseUpdatedImpl>(this, _$identity);
+      __$$ExpenseUpdatedImplCopyWithImpl<_$ExpenseUpdatedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1292,21 +1339,25 @@ abstract class _ExpenseUpdated implements ExpensesState {
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ExpenseUpdatedImplCopyWith<_$ExpenseUpdatedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExpenseUpdatedImplCopyWith<_$ExpenseUpdatedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ExpenseAddedImplCopyWith<$Res> {
-  factory _$$ExpenseAddedImplCopyWith(_$ExpenseAddedImpl value, $Res Function(_$ExpenseAddedImpl) then) =
+  factory _$$ExpenseAddedImplCopyWith(
+          _$ExpenseAddedImpl value, $Res Function(_$ExpenseAddedImpl) then) =
       __$$ExpenseAddedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ExpenseAddedImplCopyWithImpl<$Res> extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseAddedImpl>
+class __$$ExpenseAddedImplCopyWithImpl<$Res>
+    extends _$ExpensesStateCopyWithImpl<$Res, _$ExpenseAddedImpl>
     implements _$$ExpenseAddedImplCopyWith<$Res> {
-  __$$ExpenseAddedImplCopyWithImpl(_$ExpenseAddedImpl _value, $Res Function(_$ExpenseAddedImpl) _then)
+  __$$ExpenseAddedImplCopyWithImpl(
+      _$ExpenseAddedImpl _value, $Res Function(_$ExpenseAddedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1439,5 +1490,6 @@ abstract class _ExpenseAdded implements ExpensesState {
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ExpenseAddedImplCopyWith<_$ExpenseAddedImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$ExpenseAddedImplCopyWith<_$ExpenseAddedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
