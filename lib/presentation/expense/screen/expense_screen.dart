@@ -10,7 +10,7 @@ class ExpenseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<ExpenseBloc>(
+    return BlocProvider(
       create: (context) => sl<ExpenseBloc>()..add(const ExpensesEvent.getExpenses()),
       child: const ResponsiveLayoutWrapper(
         mobilePortraitLayout: ExpenseMobilePortraitView(),

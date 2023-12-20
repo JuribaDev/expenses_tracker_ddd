@@ -7,7 +7,9 @@ import 'package:expenses_tracker_ddd/presentation/expense/core/states/common_sta
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'expense_bloc.freezed.dart';
+
 part 'expense_event.dart';
+
 part 'expense_state.dart';
 
 class ExpenseBloc extends Bloc<ExpensesEvent, ExpensesState> {

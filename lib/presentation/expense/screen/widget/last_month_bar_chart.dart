@@ -25,13 +25,12 @@ class LastMonthExpensesBarChart extends StatelessWidget {
             BarChartData(
               maxY: barData.totalY + (barData.totalY * 0.2),
               minY: 0,
-              gridData: FlGridData(show: false),
+              gridData: const FlGridData(show: false),
               borderData: FlBorderData(show: false),
               titlesData: FlTitlesData(
-                show: true,
-                topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                topTitles: const AxisTitles(),
+                leftTitles: const AxisTitles(),
+                rightTitles: const AxisTitles(),
                 bottomTitles: AxisTitles(sideTitles: SideTitles(showTitles: true, getTitlesWidget: getBottomTitles)),
               ),
               barGroups: barData.barData
