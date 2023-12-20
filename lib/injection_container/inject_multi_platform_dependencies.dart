@@ -8,7 +8,6 @@ import 'package:expenses_tracker_ddd/domain/expense/i_expense_repository.dart';
 import 'package:expenses_tracker_ddd/infrastructure/expense/data_sources/expense_local_repository_impl.dart';
 import 'package:expenses_tracker_ddd/infrastructure/expense/data_sources/local_data_source/drift_local_data_source.dart';
 import 'package:expenses_tracker_ddd/presentation/expense/bloc/expense_bloc.dart';
-import 'package:expenses_tracker_ddd/presentation/expense/bloc/expense_validation_bloc/expense_validation_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
 
@@ -36,5 +35,4 @@ Future<void> injectMultiPlatformDependencies(
   // Presentation layer
   sl.registerLazySingleton<WatchLastMonthExpensesBloc>(() => WatchLastMonthExpensesBloc(sl()));
   sl.registerLazySingleton<ExpenseBloc>(() => ExpenseBloc(sl(), sl(), sl(), sl()));
-  sl.registerLazySingleton<ExpenseValidationBloc>(() => ExpenseValidationBloc());
 }

@@ -3,36 +3,30 @@
 part of 'drift_local_source_manager.dart';
 
 // ignore_for_file: type=lint
-class $ExpensesTableTable extends ExpensesTable
-    with TableInfo<$ExpensesTableTable, ExpensesTableData> {
+class $ExpensesTableTable extends ExpensesTable with TableInfo<$ExpensesTableTable, ExpensesTableData> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
   $ExpensesTableTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
-  late final GeneratedColumn<int> id = GeneratedColumn<int>(
-      'id', aliasedName, false,
+  late final GeneratedColumn<int> id = GeneratedColumn<int>('id', aliasedName, false,
       hasAutoIncrement: true,
       type: DriftSqlType.int,
       requiredDuringInsert: false,
-      defaultConstraints:
-          GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
+      defaultConstraints: GeneratedColumn.constraintIsAlways('PRIMARY KEY AUTOINCREMENT'));
   static const VerificationMeta _titleMeta = const VerificationMeta('title');
   @override
-  late final GeneratedColumn<String> title = GeneratedColumn<String>(
-      'title', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
+  late final GeneratedColumn<String> title =
+      GeneratedColumn<String>('title', aliasedName, false, type: DriftSqlType.string, requiredDuringInsert: true);
   static const VerificationMeta _amountMeta = const VerificationMeta('amount');
   @override
-  late final GeneratedColumn<double> amount = GeneratedColumn<double>(
-      'amount', aliasedName, false,
-      type: DriftSqlType.double, requiredDuringInsert: true);
+  late final GeneratedColumn<double> amount =
+      GeneratedColumn<double>('amount', aliasedName, false, type: DriftSqlType.double, requiredDuringInsert: true);
   static const VerificationMeta _dateMeta = const VerificationMeta('date');
   @override
-  late final GeneratedColumn<DateTime> date = GeneratedColumn<DateTime>(
-      'date', aliasedName, false,
-      type: DriftSqlType.dateTime, requiredDuringInsert: true);
+  late final GeneratedColumn<DateTime> date =
+      GeneratedColumn<DateTime>('date', aliasedName, false, type: DriftSqlType.dateTime, requiredDuringInsert: true);
   @override
   List<GeneratedColumn> get $columns => [id, title, amount, date];
   @override
@@ -41,28 +35,24 @@ class $ExpensesTableTable extends ExpensesTable
   String get actualTableName => $name;
   static const String $name = 'expenses';
   @override
-  VerificationContext validateIntegrity(Insertable<ExpensesTableData> instance,
-      {bool isInserting = false}) {
+  VerificationContext validateIntegrity(Insertable<ExpensesTableData> instance, {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('id')) {
       context.handle(_idMeta, id.isAcceptableOrUnknown(data['id']!, _idMeta));
     }
     if (data.containsKey('title')) {
-      context.handle(
-          _titleMeta, title.isAcceptableOrUnknown(data['title']!, _titleMeta));
+      context.handle(_titleMeta, title.isAcceptableOrUnknown(data['title']!, _titleMeta));
     } else if (isInserting) {
       context.missing(_titleMeta);
     }
     if (data.containsKey('amount')) {
-      context.handle(_amountMeta,
-          amount.isAcceptableOrUnknown(data['amount']!, _amountMeta));
+      context.handle(_amountMeta, amount.isAcceptableOrUnknown(data['amount']!, _amountMeta));
     } else if (isInserting) {
       context.missing(_amountMeta);
     }
     if (data.containsKey('date')) {
-      context.handle(
-          _dateMeta, date.isAcceptableOrUnknown(data['date']!, _dateMeta));
+      context.handle(_dateMeta, date.isAcceptableOrUnknown(data['date']!, _dateMeta));
     } else if (isInserting) {
       context.missing(_dateMeta);
     }
@@ -75,14 +65,10 @@ class $ExpensesTableTable extends ExpensesTable
   ExpensesTableData map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return ExpensesTableData(
-      id: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
-      title: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}title'])!,
-      amount: attachedDatabase.typeMapping
-          .read(DriftSqlType.double, data['${effectivePrefix}amount'])!,
-      date: attachedDatabase.typeMapping
-          .read(DriftSqlType.dateTime, data['${effectivePrefix}date'])!,
+      id: attachedDatabase.typeMapping.read(DriftSqlType.int, data['${effectivePrefix}id'])!,
+      title: attachedDatabase.typeMapping.read(DriftSqlType.string, data['${effectivePrefix}title'])!,
+      amount: attachedDatabase.typeMapping.read(DriftSqlType.double, data['${effectivePrefix}amount'])!,
+      date: attachedDatabase.typeMapping.read(DriftSqlType.dateTime, data['${effectivePrefix}date'])!,
     );
   }
 
@@ -92,17 +78,12 @@ class $ExpensesTableTable extends ExpensesTable
   }
 }
 
-class ExpensesTableData extends DataClass
-    implements Insertable<ExpensesTableData> {
+class ExpensesTableData extends DataClass implements Insertable<ExpensesTableData> {
   final int id;
   final String title;
   final double amount;
   final DateTime date;
-  const ExpensesTableData(
-      {required this.id,
-      required this.title,
-      required this.amount,
-      required this.date});
+  const ExpensesTableData({required this.id, required this.title, required this.amount, required this.date});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -122,8 +103,7 @@ class ExpensesTableData extends DataClass
     );
   }
 
-  factory ExpensesTableData.fromJson(Map<String, dynamic> json,
-      {ValueSerializer? serializer}) {
+  factory ExpensesTableData.fromJson(Map<String, dynamic> json, {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return ExpensesTableData(
       id: serializer.fromJson<int>(json['id']),
@@ -143,9 +123,7 @@ class ExpensesTableData extends DataClass
     };
   }
 
-  ExpensesTableData copyWith(
-          {int? id, String? title, double? amount, DateTime? date}) =>
-      ExpensesTableData(
+  ExpensesTableData copyWith({int? id, String? title, double? amount, DateTime? date}) => ExpensesTableData(
         id: id ?? this.id,
         title: title ?? this.title,
         amount: amount ?? this.amount,
@@ -208,10 +186,7 @@ class ExpensesTableCompanion extends UpdateCompanion<ExpensesTableData> {
   }
 
   ExpensesTableCompanion copyWith(
-      {Value<int>? id,
-      Value<String>? title,
-      Value<double>? amount,
-      Value<DateTime>? date}) {
+      {Value<int>? id, Value<String>? title, Value<double>? amount, Value<DateTime>? date}) {
     return ExpensesTableCompanion(
       id: id ?? this.id,
       title: title ?? this.title,
@@ -254,8 +229,7 @@ abstract class _$DriftLocalDatabaseManager extends GeneratedDatabase {
   _$DriftLocalDatabaseManager(QueryExecutor e) : super(e);
   late final $ExpensesTableTable expensesTable = $ExpensesTableTable(this);
   @override
-  Iterable<TableInfo<Table, Object?>> get allTables =>
-      allSchemaEntities.whereType<TableInfo<Table, Object?>>();
+  Iterable<TableInfo<Table, Object?>> get allTables => allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
   List<DatabaseSchemaEntity> get allSchemaEntities => [expensesTable];
 }

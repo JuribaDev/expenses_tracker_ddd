@@ -53,15 +53,12 @@ mixin _$WatchLastMonthExpensesEvent {
 /// @nodoc
 abstract class $WatchLastMonthExpensesEventCopyWith<$Res> {
   factory $WatchLastMonthExpensesEventCopyWith(
-          WatchLastMonthExpensesEvent value,
-          $Res Function(WatchLastMonthExpensesEvent) then) =
-      _$WatchLastMonthExpensesEventCopyWithImpl<$Res,
-          WatchLastMonthExpensesEvent>;
+          WatchLastMonthExpensesEvent value, $Res Function(WatchLastMonthExpensesEvent) then) =
+      _$WatchLastMonthExpensesEventCopyWithImpl<$Res, WatchLastMonthExpensesEvent>;
 }
 
 /// @nodoc
-class _$WatchLastMonthExpensesEventCopyWithImpl<$Res,
-        $Val extends WatchLastMonthExpensesEvent>
+class _$WatchLastMonthExpensesEventCopyWithImpl<$Res, $Val extends WatchLastMonthExpensesEvent>
     implements $WatchLastMonthExpensesEventCopyWith<$Res> {
   _$WatchLastMonthExpensesEventCopyWithImpl(this._value, this._then);
 
@@ -73,18 +70,17 @@ class _$WatchLastMonthExpensesEventCopyWithImpl<$Res,
 
 /// @nodoc
 abstract class _$$GetLastMonthExpensesImplCopyWith<$Res> {
-  factory _$$GetLastMonthExpensesImplCopyWith(_$GetLastMonthExpensesImpl value,
-          $Res Function(_$GetLastMonthExpensesImpl) then) =
+  factory _$$GetLastMonthExpensesImplCopyWith(
+          _$GetLastMonthExpensesImpl value, $Res Function(_$GetLastMonthExpensesImpl) then) =
       __$$GetLastMonthExpensesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
 class __$$GetLastMonthExpensesImplCopyWithImpl<$Res>
-    extends _$WatchLastMonthExpensesEventCopyWithImpl<$Res,
-        _$GetLastMonthExpensesImpl>
+    extends _$WatchLastMonthExpensesEventCopyWithImpl<$Res, _$GetLastMonthExpensesImpl>
     implements _$$GetLastMonthExpensesImplCopyWith<$Res> {
-  __$$GetLastMonthExpensesImplCopyWithImpl(_$GetLastMonthExpensesImpl _value,
-      $Res Function(_$GetLastMonthExpensesImpl) _then)
+  __$$GetLastMonthExpensesImplCopyWithImpl(
+      _$GetLastMonthExpensesImpl _value, $Res Function(_$GetLastMonthExpensesImpl) _then)
       : super(_value, _then);
 }
 
@@ -100,9 +96,7 @@ class _$GetLastMonthExpensesImpl implements _GetLastMonthExpenses {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetLastMonthExpensesImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$GetLastMonthExpensesImpl);
   }
 
   @override
@@ -214,15 +208,12 @@ mixin _$WatchLastMonthExpensesState {
 /// @nodoc
 abstract class $WatchLastMonthExpensesStateCopyWith<$Res> {
   factory $WatchLastMonthExpensesStateCopyWith(
-          WatchLastMonthExpensesState value,
-          $Res Function(WatchLastMonthExpensesState) then) =
-      _$WatchLastMonthExpensesStateCopyWithImpl<$Res,
-          WatchLastMonthExpensesState>;
+          WatchLastMonthExpensesState value, $Res Function(WatchLastMonthExpensesState) then) =
+      _$WatchLastMonthExpensesStateCopyWithImpl<$Res, WatchLastMonthExpensesState>;
 }
 
 /// @nodoc
-class _$WatchLastMonthExpensesStateCopyWithImpl<$Res,
-        $Val extends WatchLastMonthExpensesState>
+class _$WatchLastMonthExpensesStateCopyWithImpl<$Res, $Val extends WatchLastMonthExpensesState>
     implements $WatchLastMonthExpensesStateCopyWith<$Res> {
   _$WatchLastMonthExpensesStateCopyWithImpl(this._value, this._then);
 
@@ -234,8 +225,7 @@ class _$WatchLastMonthExpensesStateCopyWithImpl<$Res,
 
 /// @nodoc
 abstract class _$$CommonStateImplCopyWith<$Res> {
-  factory _$$CommonStateImplCopyWith(
-          _$CommonStateImpl value, $Res Function(_$CommonStateImpl) then) =
+  factory _$$CommonStateImplCopyWith(_$CommonStateImpl value, $Res Function(_$CommonStateImpl) then) =
       __$$CommonStateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CommonState commonState});
@@ -244,11 +234,9 @@ abstract class _$$CommonStateImplCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CommonStateImplCopyWithImpl<$Res>
-    extends _$WatchLastMonthExpensesStateCopyWithImpl<$Res, _$CommonStateImpl>
+class __$$CommonStateImplCopyWithImpl<$Res> extends _$WatchLastMonthExpensesStateCopyWithImpl<$Res, _$CommonStateImpl>
     implements _$$CommonStateImplCopyWith<$Res> {
-  __$$CommonStateImplCopyWithImpl(
-      _$CommonStateImpl _value, $Res Function(_$CommonStateImpl) _then)
+  __$$CommonStateImplCopyWithImpl(_$CommonStateImpl _value, $Res Function(_$CommonStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -291,8 +279,7 @@ class _$CommonStateImpl implements _CommonState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommonStateImpl &&
-            (identical(other.commonState, commonState) ||
-                other.commonState == commonState));
+            (identical(other.commonState, commonState) || other.commonState == commonState));
   }
 
   @override
@@ -368,31 +355,25 @@ class _$CommonStateImpl implements _CommonState {
 }
 
 abstract class _CommonState implements WatchLastMonthExpensesState {
-  const factory _CommonState({required final CommonState commonState}) =
-      _$CommonStateImpl;
+  const factory _CommonState({required final CommonState commonState}) = _$CommonStateImpl;
 
   CommonState get commonState;
   @JsonKey(ignore: true)
-  _$$CommonStateImplCopyWith<_$CommonStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommonStateImplCopyWith<_$CommonStateImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
+  factory _$$LoadedImplCopyWith(_$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
       __$$LoadedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Stream<List<ExpenseDto>> stream});
 }
 
 /// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$WatchLastMonthExpensesStateCopyWithImpl<$Res, _$LoadedImpl>
+class __$$LoadedImplCopyWithImpl<$Res> extends _$WatchLastMonthExpensesStateCopyWithImpl<$Res, _$LoadedImpl>
     implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
-      : super(_value, _then);
+  __$$LoadedImplCopyWithImpl(_$LoadedImpl _value, $Res Function(_$LoadedImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -435,8 +416,7 @@ class _$LoadedImpl implements _Loaded {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith => __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -506,6 +486,5 @@ abstract class _Loaded implements WatchLastMonthExpensesState {
 
   Stream<List<ExpenseDto>> get stream;
   @JsonKey(ignore: true)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith => throw _privateConstructorUsedError;
 }
