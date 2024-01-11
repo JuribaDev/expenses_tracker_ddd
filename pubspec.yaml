@@ -40,7 +40,7 @@ dependencies:
   sqlite3_flutter_libs: ^0.5.18
   path_provider: ^2.1.2
   path: ^1.8.3
-  wolt_modal_sheet: ^0.2.0
+  wolt_modal_sheet: ^0.3.0
 
 dev_dependencies:
   bloc_test: ^9.1.5
