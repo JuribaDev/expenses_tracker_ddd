@@ -33,7 +33,7 @@ dependencies:
   shimmer: ^3.0.0
   flutter_hooks: ^0.20.4
   device_preview: ^1.1.0
-  fl_chart: ^0.66.0
+  fl_chart: ^0.66.1
 
   #  Local DB
   drift: ^2.15.0
