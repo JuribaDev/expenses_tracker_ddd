@@ -37,7 +37,7 @@ dependencies:
 
   #  Local DB
   drift: ^2.15.0
-  sqlite3_flutter_libs: ^0.5.18
+  sqlite3_flutter_libs: ^0.5.20
   path_provider: ^2.1.2
   path: ^1.8.3
   wolt_modal_sheet: ^0.4.0
