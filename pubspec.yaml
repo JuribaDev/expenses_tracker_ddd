@@ -43,7 +43,7 @@ dependencies:
   wolt_modal_sheet: ^0.4.1
 
 dev_dependencies:
-  bloc_test: ^9.1.5
+  bloc_test: ^9.1.6
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.3
