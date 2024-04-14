@@ -16,40 +16,40 @@ dependencies:
   intl: ^0.18.1
 
   #  State Management
-  bloc: ^8.1.3
-  flutter_bloc: ^8.1.4
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.5
 
   #  Service Locator
-  get_it: ^7.6.7
+  get_it: ^7.6.9
 
   #  Helpers
   equatable: ^2.0.5
   freezed_annotation: ^2.4.1
 
   #  Logging
-  logger: ^2.1.0
+  logger: ^2.2.0
 
   #  UI
   shimmer: ^3.0.0
-  flutter_hooks: ^0.21.0
+  flutter_hooks: ^0.20.5
   device_preview: ^1.1.0
-  fl_chart: ^0.66.2
+  fl_chart: ^0.67.0
 
   #  Local DB
   drift: ^2.16.0
   sqlite3_flutter_libs: ^0.5.20
-  path_provider: ^2.1.2
+  path_provider: ^2.1.3
   path: ^1.9.0
   wolt_modal_sheet: ^0.5.0
 
 dev_dependencies:
-  bloc_test: ^9.1.6
+  bloc_test: ^9.1.7
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.3
   very_good_analysis: ^5.1.0
-  build_runner: ^2.4.8
-  freezed: ^2.4.7
+  build_runner: ^2.4.9
+  freezed: ^2.5.2
   drift_dev: ^2.16.0
 
 flutter:
