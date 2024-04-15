@@ -20,7 +20,7 @@ dependencies:
   flutter_bloc: ^8.1.5
 
   #  Service Locator
-  get_it: ^7.6.9
+  get_it: ^7.7.0
 
   #  Helpers
   equatable: ^2.0.5
