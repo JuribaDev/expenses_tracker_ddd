@@ -79,8 +79,8 @@ class AddOrUpdateExpenseWidget extends HookWidget {
                     height: 50,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Theme.of(context).colorScheme.onBackground,
-                        foregroundColor: Theme.of(context).colorScheme.background,
+                        backgroundColor: Theme.of(context).colorScheme.onSurface,
+                        foregroundColor: Theme.of(context).colorScheme.surface,
                       ),
                       onPressed: () => addOrUpdate(context, titleController.text, amountController.text, now),
                       child: const Text(
