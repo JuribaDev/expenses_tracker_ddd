@@ -20,14 +20,14 @@ class ExpenseMobilePortraitView extends HookWidget {
             title: const Text('Expense Tracker'),
           ),
           floatingActionButton: FloatingActionButton(
-            backgroundColor: Theme.of(context).colorScheme.onBackground,
+            backgroundColor: Theme.of(context).colorScheme.onSurface,
             onPressed: () => Navigator.of(context).push(
               ModalBottomSheetRoute(
                 builder: (context) => AddOrUpdateExpenseWidget(),
                 isScrollControlled: true,
               ),
             ),
-            child: Icon(Icons.add, color: Theme.of(context).colorScheme.background),
+            child: Icon(Icons.add, color: Theme.of(context).colorScheme.surface),
           ),
           body: Padding(
             padding: const EdgeInsets.all(8),
