@@ -27,7 +27,7 @@ dependencies:
   freezed_annotation: ^2.4.4
 
   #  Logging
-  logger: ^2.4.0
+  logger: ^2.5.0
 
   #  UI
   shimmer: ^3.0.0
